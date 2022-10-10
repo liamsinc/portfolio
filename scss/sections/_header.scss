@@ -1,13 +1,52 @@
-header {
+.header {
+    // Don't display the vertical header on mobile devices
     display: none;
 
-    @include media-query (small) {
+    // Display the vertical header when small breakpoint reached
+    @include media-query (medium) {
         display: block;
     }
 
-
-    border: 1px solid $aqua;
-    width: 20%;
+    // Some initial values
+    width: em(200px);
     height: 100vh;
+    text-align: center;
+    border-right: 1px solid $aqua;
+
+    // Each item within the header is a flex container, apply default flex template
+    &__logo, &__nav, &__socials {
+        @include flex-template();
+    }
+
+    // Header child element individual stylings
+
+    &__logo {
+        height: em(150px);
+        border-bottom: 1px solid $aqua;
+        align-items: center;
+
+        &-link:hover {@include text-decoration-template();}
+    }
+
+    &__nav {
+        height: em(400px);
+
+        &-list {
+            margin: em(50px) 0;
+        }
+
+        &-item {
+            margin-bottom: em(20px);
+            &:hover {@include text-decoration-template();}
+        }
+    }
+
+    &__socials {
+        height: em(50px);
+    }
+
+
+
+    
 }
 

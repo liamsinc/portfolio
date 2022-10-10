@@ -27,3 +27,15 @@
 		@error "Error: No value could be retrieved from argument $break: '#{$break}'";
 	}
 }
+
+
+@mixin flex-template {
+	display: flex;
+	justify-content: center;
+}
+
+@mixin text-decoration-template {
+	text-decoration: underline;
+	text-decoration-color: $aqua;
+	text-underline-offset: em(10px);
+}
