@@ -1,3 +1,14 @@
 header {
+    display: none;
+
+    @include media-query (small) {
+        
+    }
+
+
+
+
     background-color: aqua;
+    width: 20%;
+    height: 100vh;
 }

@@ -2,7 +2,7 @@
 
 // Media query mixin
 
-@mixin media-query($break) {
+@mixin media-query ($break) {
 	@if $break == "small" {
 		@media (min-width: $brkpoint-sm)  {
 			@content;

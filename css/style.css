@@ -180,8 +180,19 @@ template {
 [hidden] {
   display: none; }
 
+/* line 1, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+
 /* line 1, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
 header {
-  background-color: aqua; }
+  display: none;
+  @use media-query (small) {}  background-color: aqua;
+  width: 20%;
+  height: 100vh; }
 
 /*# sourceMappingURL=style.css.map */
