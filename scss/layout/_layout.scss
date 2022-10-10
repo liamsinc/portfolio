@@ -1,12 +1,18 @@
+// Container for entire site (header and main)
+
 .site__container {
     display: flex;
+    flex-direction: row;
 }
 
+// Adds margin where class is present
 .container {
     margin: em(16px);
 }
 
+// Container for site content
 .main {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }

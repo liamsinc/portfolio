@@ -1,0 +1,47 @@
+.project {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: em(30px);
+        column-gap: em(30px);
+        flex-wrap: wrap;
+
+        @include media-query (small) {
+            flex-direction: row;
+        }
+    }
+
+    &__item  {
+        display: flex;
+        border: 1px solid $aqua;
+        border-radius: em(5px);
+        padding-bottom: em(10px);
+        height: auto;
+
+        &:hover {
+            box-shadow: 0 0 10px $aqua;
+        }
+
+        @include media-query (small) {
+            width: 47%;
+        }
+
+        @include media-query (medium) {
+            width: 29%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: em(10px);
+        margin: 0 em(10px);
+    }
+
+    &__img {
+        width: 100%;
+        border-top-left-radius: em(5px);
+        border-top-right-radius: em(5px);
+    }
+}
