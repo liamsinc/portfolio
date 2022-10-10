@@ -185,14 +185,30 @@ template {
   box-sizing: border-box; }
 
 /* line 5, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0; }
+body {
+  background-color: #000;
+  color: #fff; }
+
+/* line 10, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* line 16, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+a {
+  text-decoration: none;
+  color: #fff; }
 
 /* line 1, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
 header {
   display: none;
-  @use media-query (small) {}  background-color: aqua;
+  border: 1px solid #00FFFF;
   width: 20%;
   height: 100vh; }
+  @media (min-width: 576px) {
+    /* line 1, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
+    header {
+      display: block; } }
 
 /*# sourceMappingURL=style.css.map */

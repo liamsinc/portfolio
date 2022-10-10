@@ -2,13 +2,12 @@ header {
     display: none;
 
     @include media-query (small) {
-        
+        display: block;
     }
 
 
-
-
-    background-color: aqua;
+    border: 1px solid $aqua;
     width: 20%;
     height: 100vh;
 }
+
