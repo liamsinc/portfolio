@@ -186,19 +186,34 @@ template {
 
 /* line 5, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
 body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
   background-color: #000;
   color: #fff; }
 
-/* line 10, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+/* line 12, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
 h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-/* line 16, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
+/* line 18, ../../../Documents/Netmatters/Portfolio/scss/base/_base.scss */
 a {
   text-decoration: none;
   color: #fff; }
+
+/* line 1, ../../../Documents/Netmatters/Portfolio/scss/layout/_layout.scss */
+.site__container {
+  display: flex; }
+
+/* line 5, ../../../Documents/Netmatters/Portfolio/scss/layout/_layout.scss */
+.container {
+  margin: 1em; }
+
+/* line 9, ../../../Documents/Netmatters/Portfolio/scss/layout/_layout.scss */
+.main {
+  display: flex;
+  width: 100%; }
 
 /* line 1, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
 .header {
@@ -242,5 +257,26 @@ a {
   /* line 44, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
   .header__socials {
     height: 3.125em; }
+
+/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+.hero__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%; }
+
+/* line 16, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875em;
+  text-align: center;
+  color: #000; }
 
 /*# sourceMappingURL=style.css.map */
