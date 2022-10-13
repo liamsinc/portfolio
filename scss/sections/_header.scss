@@ -25,7 +25,10 @@
         border-bottom: 1px solid $aqua;
         align-items: center;
 
-        &-link:hover {@include text-decoration-template();}
+        &-link:hover {
+            @include text-decoration-template();
+            text-underline-offset: em(5px);
+        }
     }
 
     &__nav {
@@ -37,7 +40,10 @@
 
         &-item {
             margin-bottom: em(20px);
-            &:hover {@include text-decoration-template();}
+            &:hover {
+                @include text-decoration-template();
+                text-underline-offset: em(10px);
+            }
         }
     }
 
