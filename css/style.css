@@ -265,7 +265,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../img/black-hole.gif);
+  background-image: url(../img/black-hole.gif), url(../img/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
