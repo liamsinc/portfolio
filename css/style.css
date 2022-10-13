@@ -344,4 +344,22 @@ a {
   color: #00FFFF;
   border-bottom: 1px solid #00FFFF; }
 
+/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about__section {
+  text-align: center;
+  color: #00FFFF;
+  margin: 0.9375em 0; }
+
+/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__section {
+  text-align: center;
+  color: #00FFFF;
+  margin: 0.9375em 0; }
+
+/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+.scs__section {
+  text-align: center;
+  color: #00FFFF;
+  margin: 0.9375em 0; }
+
 /*# sourceMappingURL=style.css.map */
