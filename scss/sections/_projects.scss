@@ -52,6 +52,7 @@
 
     &__img {
         width: 100%;
+        border-bottom: 1px solid $aqua;
         border-top-left-radius: em(5px);
         border-top-right-radius: em(5px);
     }

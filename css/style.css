@@ -334,12 +334,14 @@ a {
 /* line 53, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__img {
   width: 100%;
+  border-bottom: 1px solid #00FFFF;
   border-top-left-radius: 0.3125em;
   border-top-right-radius: 0.3125em; }
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__section {
   text-align: center;
-  color: #00FFFF; }
+  color: #00FFFF;
+  border-bottom: 1px solid #00FFFF; }
 
 /*# sourceMappingURL=style.css.map */
