@@ -499,9 +499,10 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  min-height: 100vh; }
 
-/* line 11, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+/* line 12, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
 .coding__header {
   height: 9.375em;
   border-bottom: 1px solid #00FFFF;
@@ -514,7 +515,7 @@ a {
   background-size: cover;
   position: relative; }
 
-/* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+/* line 21, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
 .coding__title {
   color: #00FFFF;
   border-radius: 0.1875em;
