@@ -1,6 +1,7 @@
 .contact {
     &__section {
         text-align: center;
+        border-bottom: 1px solid $aqua;
     }
 
     &__title {
@@ -9,6 +10,7 @@
     }
 
     &__form {
+        margin-bottom: em(50px);
         padding: 0 em(30px);
         display: flex;
         flex-direction: column;
