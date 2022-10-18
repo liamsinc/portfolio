@@ -10,4 +10,32 @@
     &__title {
         color: $aqua;
     }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: em(30px);
+    }
+
+    &__item {
+        border: 1px solid $aqua;
+        border-radius: em(5px);
+        padding: em(30px);
+
+        &-title {
+            color: $aqua;
+            margin-bottom: em(15px);
+        }
+
+        &-content {
+            margin-bottom: em(20px);
+        }
+    }
+    &-link {
+        color: $aqua;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $aqua;
+        }
+    }
 }

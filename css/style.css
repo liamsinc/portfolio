@@ -435,6 +435,33 @@ a {
 .about__title {
   color: #00FFFF; }
 
+/* line 14, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875em; }
+
+/* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about__item {
+  border: 1px solid #00FFFF;
+  border-radius: 0.3125em;
+  padding: 1.875em; }
+  /* line 25, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  .about__item-title {
+    color: #00FFFF;
+    margin-bottom: 0.9375em; }
+  /* line 30, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  .about__item-content {
+    margin-bottom: 1.25em; }
+
+/* line 34, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about-link {
+  color: #00FFFF; }
+  /* line 36, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  .about-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #00FFFF; }
+
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
 .coding__section {
   text-align: center; }
