@@ -99,7 +99,16 @@
             </section>
             <section class="contact__section" id="contact">
                 <div class="contact__content container">
-                    <h1>This section will contain the contact form</h1>
+                    <h1 class="contact__title">Contact Me</h1>
+                    <form class="contact__form">
+                        <label class="contact__label required" for="name">Name</label>
+                        <input class="contact__input" type="text" id="name" name="name" placeholder="Enter your first name...">
+                        <label class="contact__label required" for="email">Email</label>
+                        <input class="contact__input" type="email" id="email" name="email" placeholder="Enter your email address...">
+                        <label class="contact__label required" for="message">Message</label>
+                        <textarea class="contact__input" rows="10" cols="30" placeholder="Enter your message..."></textarea>
+                        <input class="contact__button" type="submit" value="Submit"> 
+                    </form>
                 </div>
             </section>
         </div>
