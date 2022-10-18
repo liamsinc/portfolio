@@ -3,11 +3,18 @@
     &__section {
         border-bottom: 1px solid $aqua;
         padding-bottom: em(30px);
+        background-image: url(../img/eclipse.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 
     &__heading {
         text-align: center;
-        margin: em(15px) 0;
+        margin: em(15px);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: em(3px);
         color: $aqua;
     }
 
@@ -25,6 +32,7 @@
     }
 
     &__item  {
+        background-color: rgba($color: $black, $alpha: 0.5);
         display: flex;
         border: 1px solid $aqua;
         border-radius: em(5px);
@@ -32,6 +40,7 @@
 
         &:hover {
             box-shadow: 0 0 15px $aqua;
+            background-color: $black;
         }
 
         @include media-query (small) {

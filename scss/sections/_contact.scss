@@ -2,11 +2,18 @@
     &__section {
         text-align: center;
         border-bottom: 1px solid $aqua;
+        background-image: url(../img/nebula.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 
     &__title {
         color: $aqua;
-        margin: em(15px) 0;
+        margin: em(15px);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: em(3px);
     }
 
     &__form {
@@ -22,7 +29,7 @@
     &__input {
         width: 100%;
         border: 2px solid $aqua;
-        background-color: $black;
+        background-color: rgba($color: $black, $alpha: 0.5);
         color: $white;
         border-radius: em(5px);
         padding: em(5px) em(10px);
@@ -43,9 +50,9 @@
         width: 100%;
         margin-top: em(10px);
         padding: em(5px) em(10px);
-        border: 1px solid $aqua;
+        border: 2px solid $aqua;
         border-radius: em(5px);
-        background-color: $black;
+        background-color: rgba($color: $black, $alpha: 0.5);
         color: $aqua;
         cursor: pointer;
 

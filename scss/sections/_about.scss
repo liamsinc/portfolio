@@ -1,6 +1,11 @@
 .about {
     &__section {
         text-align: center;
+        background-image: url(../img/milky-way.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 
     &__header {
@@ -15,6 +20,7 @@
     &__title {
         color: $aqua;
         background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: em(3px);
         padding: em(5px);
     }
 
@@ -25,6 +31,7 @@
     }
 
     &__item {
+        background-color: rgba($color: $black, $alpha: 0.5);
         border: 1px solid $aqua;
         border-radius: em(5px);
         padding: em(30px);
