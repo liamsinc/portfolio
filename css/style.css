@@ -301,8 +301,23 @@ a {
   display: flex;
   flex-direction: column;
   row-gap: 1.875em;
+  align-items: center;
   text-align: center;
-  color: #000; }
+  color: #000;
+  text-shadow: 0 0 15px #00FFFF; }
+  /* line 27, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+  .hero__content > h1 {
+    width: fit-content;
+    padding: 0.3125em;
+    border-radius: 0.3125em;
+    background-color: rgba(0, 0, 0, 0.5); }
+  /* line 31, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+  .hero__content > p {
+    width: fit-content;
+    padding: 0.3125em;
+    border-radius: 0.3125em;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.25em; }
 
 /* line 3, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__section {

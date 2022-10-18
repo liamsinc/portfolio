@@ -47,3 +47,10 @@
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin hero-text-styling {
+	width: fit-content;
+	padding: em(5px);
+	border-radius: em(5px);
+	background-color: rgba($color: $black, $alpha: 0.5);
+}

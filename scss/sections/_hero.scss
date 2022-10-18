@@ -19,8 +19,18 @@
         display: flex;
         flex-direction: column;
         row-gap: em(30px);
+        align-items: center;
         text-align: center;
-
         color: $black;
+        text-shadow: 0 0 15px $aqua;
+
+        & > h1{
+            @include hero-text-styling();
+        }
+        
+        & > p {
+            @include hero-text-styling();
+            font-size: em(20px);
+        }
     }
 }
