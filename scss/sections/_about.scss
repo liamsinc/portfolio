@@ -5,10 +5,17 @@
 
     &__header {
         @include sibling-page-header-styles();
+        background-image: url(../img/earth.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 
     &__title {
         color: $aqua;
+        background-color: rgba($color: $black, $alpha: 0.5);
+        padding: em(5px);
     }
 
     &__content {
