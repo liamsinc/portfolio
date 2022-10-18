@@ -241,6 +241,7 @@ a {
     .header__logo-link:hover {
       text-decoration: underline;
       text-decoration-color: #00FFFF;
+      text-shadow: 0 0 10px #00FFFF;
       text-underline-offset: 0.3125em; }
   /* line 34, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
   .header__nav {
@@ -256,6 +257,7 @@ a {
       .header__nav-item:hover {
         text-decoration: underline;
         text-decoration-color: #00FFFF;
+        text-shadow: 0 0 10px #00FFFF;
         text-underline-offset: 0.625em; }
   /* line 51, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
   .header__socials {
@@ -265,17 +267,19 @@ a {
     justify-content: center;
     align-items: center;
     column-gap: 1.875em; }
-    /* line 60, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
+    /* line 61, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
     .header__socials > a .github-icon {
       font-size: 1.5625em; }
-      /* line 62, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
+      /* line 63, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
       .header__socials > a .github-icon:hover {
-        color: #6cc644; }
-    /* line 67, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
+        color: #6cc644;
+        text-shadow: 0 0 10px #6cc644; }
+    /* line 69, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
     .header__socials > a .linkedin-icon {
       font-size: 1.5625em; }
-      /* line 69, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
+      /* line 71, ../../../Documents/Netmatters/Portfolio/scss/sections/_header.scss */
       .header__socials > a .linkedin-icon:hover {
+        text-shadow: 0 0 10px #0072b1;
         color: #0072b1; }
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
@@ -364,48 +368,75 @@ a {
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__section {
-  text-align: center;
-  color: #00FFFF;
-  margin: 0.9375em 0; }
+  text-align: center; }
+
+/* line 6, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about__header {
+  height: 9.375em;
+  border-bottom: 1px solid #00FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 10, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+.about__title {
+  color: #00FFFF; }
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
 .coding__section {
-  text-align: center;
-  color: #00FFFF;
-  margin: 0.9375em 0; }
+  text-align: center; }
+
+/* line 6, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__header {
+  height: 9.375em;
+  border-bottom: 1px solid #00FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 10, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__title {
+  color: #00FFFF; }
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__section {
-  text-align: center;
-  margin: 0.9375em 0; }
+  text-align: center; }
 
-/* line 7, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 6, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__header {
+  height: 9.375em;
+  border-bottom: 1px solid #00FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 10, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+.scs__title {
   color: #00FFFF; }
 
-/* line 11, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 14, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__content {
   display: flex;
   flex-direction: column;
   row-gap: 1.875em; }
 
-/* line 17, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__item {
   border: 1px solid #00FFFF;
   border-radius: 0.3125em;
   padding: 1.875em; }
-  /* line 22, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 25, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 27, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 30, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__item > p, .scs__item > ul > li {
     margin-bottom: 0.625em; }
 
-/* line 33, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 36, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__treehouse {
   color: #00FFFF; }
-  /* line 35, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 38, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__treehouse:hover {
     text-decoration: underline; }
 

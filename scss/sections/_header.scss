@@ -49,6 +49,7 @@
     }
 
     &__socials {
+        
         height: em(50px);
         border-bottom: 1px solid $aqua;
         display: flex;
@@ -61,12 +62,14 @@
                 font-size: em(25px);
                 &:hover {
                     color: $github;
+                    text-shadow: 0 0 10px $github;
                 }
             }
 
             .linkedin-icon {
                 font-size: em(25px);
                 &:hover {
+                    text-shadow: 0 0 10px $linkedin;
                     color: $linkedin;
                 }
             }

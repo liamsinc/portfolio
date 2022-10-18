@@ -1,7 +1,13 @@
 .about {
     &__section {
         text-align: center;
+    }
+
+    &__header {
+        @include sibling-page-header-styles();
+    }
+
+    &__title {
         color: $aqua;
-        margin: em(15px) 0;
     }
 }

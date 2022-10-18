@@ -37,4 +37,13 @@
 @mixin text-decoration-template {
 	text-decoration: underline;
 	text-decoration-color: $aqua;
+	text-shadow: 0 0 10px $aqua;
+}
+
+@mixin sibling-page-header-styles {
+	height: em(150px);
+	border-bottom: 1px solid $aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
