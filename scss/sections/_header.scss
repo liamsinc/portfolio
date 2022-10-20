@@ -2,6 +2,12 @@
     // Don't display the vertical header on mobile devices
     display: none;
 
+    background-image: url(../img/header-star.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
     // Display the vertical header when small breakpoint reached
     @include media-query (medium) {
         display: block;
@@ -13,72 +19,94 @@
     text-align: center;
     border-right: 1px solid $aqua;
 
-    // Each item within the header is a flex container, apply default flex template
-    &__logo, &__nav, &__socials {
-        @include flex-template();
-    }
+    // Flex containers, apply default flex template
+    &__logo, &__nav, &__socials { @include flex-template(); }
 
-    // Header child element individual stylings
+    // Logo
 
     &__logo {
         height: em(150px);
         border-bottom: 1px solid $aqua;
         align-items: center;
 
-        &-link:hover {
-            @include text-decoration-template();
-            text-underline-offset: em(5px);
+        &-link {
+            background-color: rgba($color: $black, $alpha: 0.5);
+            padding: em(5px) em(6px);
+            border: 1px solid transparent;
+            border-radius: em(5px);
+
+            &:hover {
+                text-shadow: 0 0 10px $aqua;
+                border-color: $aqua;
+            }
         }
     }
+
+    // Navigation
 
     &__nav {
         height: em(275px);
         border-bottom: 1px solid $aqua;
 
-        &-list {
-            margin: em(50px) 0;
-        }
+        &-list { margin: em(45px) 0; }
 
         &-item {
-            margin-bottom: em(20px);
+            margin-bottom: em(10px);
+            background-color: rgba($color: $black, $alpha: 0.5);
+            padding: em(5px);
+            border: 1px solid transparent;
+            border-radius: em(5px);
+            height: em(30px);
+
             &:hover {
-                @include text-decoration-template();
-                text-underline-offset: em(10px);
+                text-shadow: 0 0 10px $aqua;
+                border-color: $aqua;
             }
         }
     }
 
+    // Social Links
+
     &__socials {
-        
-        height: em(50px);
-        border-bottom: 1px solid $aqua;
+        height: em(100px);
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: em(30px);
+        column-gap: em(25px);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: em(5px);
+        margin: em(15px);
 
         & > a {
-            .github-icon {
-                font-size: em(25px);
-                &:hover {
-                    color: $github;
-                    text-shadow: 0 0 10px $github;
-                }
-            }
-
-            .linkedin-icon {
-                font-size: em(25px);
-                &:hover {
-                    text-shadow: 0 0 10px $linkedin;
-                    color: $linkedin;
-                }
-            }
-        }
-        
+            .github-icon {@include social-styles(github);}
+            .linkedin-icon {@include social-styles(linkedin);}
+        } 
     }
 
+    // Copyright
 
+    &__copyright {
+        border-bottom: 1px solid $aqua;
+        border-top: 1px solid $aqua;
+        padding: em(15px) 0;
+        font-size: em(14px);
 
-    
+        &-1, &-2 {
+            background-color: rgba($color: $black, $alpha: 0.5);
+            margin: 0 em(15px);  
+        }
+
+        &-1 {
+            padding: em(5px) 0 0 0;
+            border-top-left-radius: em(5px);
+            border-top-right-radius: em(5px);
+        }
+
+        &-2 {
+            padding: 0 0 em(5px) 0;
+            border-bottom-left-radius: em(5px);
+            border-bottom-right-radius: em(5px); 
+        }
+    }
 }
 

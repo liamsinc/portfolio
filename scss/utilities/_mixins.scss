@@ -34,12 +34,6 @@
 	justify-content: center;
 }
 
-@mixin text-decoration-template {
-	text-decoration: underline;
-	text-decoration-color: $aqua;
-	text-shadow: 0 0 10px $aqua;
-}
-
 @mixin sibling-page-header-styles {
 	height: em(150px);
 	border-bottom: 1px solid $aqua;
@@ -53,4 +47,20 @@
 	padding: em(5px);
 	border-radius: em(5px);
 	background-color: rgba($color: $black, $alpha: 0.5);
+}
+
+@mixin social-styles ($type) {
+	font-size: em(35px);
+
+	@if $type == 'github' {
+		&:hover {
+			color: $github;
+			text-shadow: 0 0 15px $github;
+		}	
+	} @else {
+		&:hover {
+			color: $linkedin;
+			text-shadow: 0 0 15px $linkedin;
+		}	
+	}
 }
