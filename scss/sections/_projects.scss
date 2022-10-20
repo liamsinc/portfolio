@@ -39,6 +39,12 @@
         &:hover {
             box-shadow: 0 0 15px $aqua;
             background-color: $black;
+            .project__title {
+                text-shadow: 0 0 15px $aqua;
+            }
+            .project__desc {
+                color: $aqua;
+            }
         }
 
         @include media-query (small) {

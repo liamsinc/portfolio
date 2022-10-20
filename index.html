@@ -27,20 +27,24 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
         <header class="header">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <h1 class="header__logo-link"><a href="index.html">LS</a></h1>
+                    <h1 class="header__logo-link"><a href="index.html" title="Home">LS</a></h1>
                 </div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
-                        <li class="header__nav-item"><a href="about.html">About Me</a></li>
-                        <li class="header__nav-item"><a href="index.html#portfolio">My Portfolio</a></li>
-                        <li class="header__nav-item"><a href="examples.html">Coding Examples</a></li>
-                        <li class="header__nav-item"><a href="scs.html">SCS Scheme</a></li>
-                        <li class="header__nav-item"><a href="index.html#contact">Contact Me</a></li>
+                        <li class="header__nav-item"><a href="about.html" title="Learn more about me!">About Me</a></li>
+                        <li class="header__nav-item"><a href="index.html#portfolio" title="See my projects!">My Portfolio</a></li>
+                        <li class="header__nav-item"><a href="examples.html" title="View my code snippets!">Coding Examples</a></li>
+                        <li class="header__nav-item"><a href="scs.html" title="Learn more about the Netmatters SCS Scheme!">SCS Scheme</a></li>
+                        <li class="header__nav-item"><a href="index.html#contact" title="Send me a message!">Contact Me</a></li>
                     </ul>
                 </nav>
                 <div class="header__socials">
-                    <a href="https://www.linkedin.com/in/liam-sinclair-5881961ab" target="_blank"><i class="fa-brands fa-linkedin linkedin-icon"></i></a>
-                    <a href="https://github.com/liamsinc" target="_blank"><i class="fa-brands fa-square-github github-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/liam-sinclair-5881961ab" target="_blank" title="See my LinkedIn profile!">
+                        <i class="fa-brands fa-linkedin linkedin-icon"></i>
+                    </a>
+                    <a href="https://github.com/liamsinc" target="_blank" title="See my GitHub projects!">
+                        <i class="fa-brands fa-square-github github-icon"></i>
+                    </a>
                 </div>
                 <div class="header__copyright">
                     <p class="header__copyright-1">&copy; 2022 Liam Sinclair.</p>
@@ -59,75 +63,75 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 <h1 class="project__heading">My Projects</h1>
                 <div class="project__content container">
                     <div class="project__item">
-                        <a href="https://github.com/liamsinc/html-css-reflection" target="_blank">
-                            <img class="project__img" src="img/project-img.jpg" alt="Project One - Netmatters HTML/CSS Reflection">
+                        <a href="https://github.com/liamsinc/html-css-reflection" target="_blank" title="See the source code on GitHub!">
+                            <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>HTML/CSS Reflection</h1>
-                                <p>Netmatters Website Reflection</p> 
+                                <h1 class="project__title">HTML/CSS Reflection</h1>
+                                <p class="project__desc">Netmatters Website Reflection</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
-                        <a href="https://github.com/liamsinc/portfolio" target="_blank">
+                        <a href="https://github.com/liamsinc/portfolio" target="_blank" title="See the source code on GitHub!">
                             <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>Portfolio Website</h1>
-                                <p>My Portfolio Website</p> 
+                                <h1 class="project__title">Portfolio Website</h1>
+                                <p class="project__desc">The website you see before you!</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
-                        <a href="#">
+                        <a href="#" target="_blank" title="See the source code on GitHub!">
                             <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>Project Three</h1>
-                                <p>PROJECT DESCRIPTION</p> 
+                                <h1 class="project__title">Project Three</h1>
+                                <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
-                        <a href="#">
+                        <a href="#" target="_blank" title="See the source code on GitHub!">
                             <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>Project Four</h1>
-                                <p>PROJECT DESCRIPTION</p> 
+                                <h1 class="project__title">Project Four</h1>
+                                <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
-                        <a href="#">
+                        <a href="#" target="_blank" title="See the source code on GitHub!">
                             <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>Project Five</h1>
-                                <p>PROJECT DESCRIPTION</p> 
+                                <h1 class="project__title">Project Five</h1>
+                                <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
-                        <a href="#">
+                        <a href="#" target="_blank" title="See the source code on GitHub!">
                             <img class="project__img" src="img/project-img.jpg">
                             <div class="project__text">
-                                <h1>Project Six</h1>
-                                <p>PROJECT DESCRIPTION</p> 
+                                <h1 class="project__title">Project Six</h1>
+                                <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                 </div>
             </section>
-            <section class="contact__section" id="contact">
+            <section class="contact__section">
                 <div class="contact__content container">
                     <h1 class="contact__title">Contact Form</h1>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
-                    <form class="contact__form">
+                    <form class="contact__form" id="contact">
                         <label class="contact__label required" for="name">Name</label>
-                        <input class="contact__input" type="text" id="name" name="name" placeholder="Enter your first name...">
+                        <input class="contact__input" type="text" id="name" name="name" placeholder="Please enter your first name&hellip;">
                         <label class="contact__label required" for="email">Email</label>
-                        <input class="contact__input" type="email" id="email" name="email" placeholder="Enter your email address...">
+                        <input class="contact__input" type="email" id="email" name="email" placeholder="Please enter your email address&hellip;">
                         <label class="contact__label required" for="subject">Subject</label>
-                        <input class="contact__input" type="text" id="subject" name="subject" placeholder="Enter the message subject...">
+                        <input class="contact__input" type="text" id="subject" name="subject" placeholder="Please enter the message subject&hellip;">
                         <label class="contact__label required" for="message">Message</label>
-                        <textarea class="contact__input" id="message" rows="10" cols="30" placeholder="Enter your message..."></textarea>
-                        <input class="contact__button" type="submit" value="Submit"> 
+                        <textarea class="contact__input" id="message" rows="10" cols="30" placeholder="Please enter your message&hellip;"></textarea>
+                        <input class="contact__button" type="submit" value="Send Message" id="submit"> 
                     </form>
                 </div>
             </section>
