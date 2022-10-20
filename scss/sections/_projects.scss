@@ -4,10 +4,7 @@
         border-bottom: 1px solid $aqua;
         padding-bottom: em(30px);
         background-image: url(../img/eclipse.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        @include background-image-styles();
     }
 
     &__heading {

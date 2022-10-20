@@ -2,20 +2,14 @@
     &__section {
         text-align: center;
         background-image: url(../img/singularity.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        @include background-image-styles();
         min-height: 100vh; // Only until content is inserted
     }
 
     &__header {
         @include sibling-page-header-styles();
         background-image: url(../img/supernova.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        @include background-image-styles();
     }
 
     &__title {

@@ -3,10 +3,7 @@
         text-align: center;
         border-bottom: 1px solid $aqua;
         background-image: url(../img/nebula.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        @include background-image-styles();
     }
 
     &__title {

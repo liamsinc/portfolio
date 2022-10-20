@@ -3,10 +3,7 @@
     display: none;
 
     background-image: url(../img/header-star.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    @include background-image-styles();
 
     // Display the vertical header when small breakpoint reached
     @include media-query (medium) {

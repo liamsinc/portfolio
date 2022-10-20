@@ -76,3 +76,10 @@
 		margin-bottom: em(15px);
 	}
 }
+
+@mixin background-image-styles() {
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
