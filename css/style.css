@@ -439,14 +439,15 @@ a {
 
 /* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__subtitle {
-  color: #00FFFF;
+  color: #fff;
+  font-weight: 600;
   margin: 0 0 0.9375em 0;
   font-size: 1.25em;
   padding: 0.3125em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.3125em; }
 
-/* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+/* line 30, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__form {
   margin-bottom: 3.125em;
   display: flex;
@@ -455,7 +456,7 @@ a {
   align-items: center;
   row-gap: 0.625em; }
 
-/* line 38, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+/* line 39, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__input {
   width: 100%;
   border: 2px solid #00FFFF;
@@ -464,12 +465,12 @@ a {
   border-radius: 0.3125em;
   padding: 0.3125em 0.625em;
   resize: none; }
-  /* line 47, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+  /* line 48, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
   .contact__input:focus {
     outline: none;
     box-shadow: 0 0 10px #00FFFF; }
 
-/* line 53, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+/* line 54, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__label {
   color: #fff;
   align-self: flex-start;
@@ -478,7 +479,7 @@ a {
   border-radius: 0.3125em;
   cursor: pointer; }
 
-/* line 62, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+/* line 63, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__button {
   width: 100%;
   margin-top: 0.625em;
@@ -488,12 +489,12 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   color: #00FFFF;
   cursor: pointer; }
-  /* line 72, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+  /* line 73, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
   .contact__button:hover {
     background-color: #00FFFF;
     color: #000; }
 
-/* line 79, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
+/* line 80, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .required::after {
   content: ' *';
   color: red; }

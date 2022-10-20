@@ -18,7 +18,8 @@
     }
 
     &__subtitle {
-        color: $aqua;
+        color: $white;
+        font-weight: $font-weight--bold;
         margin: 0 0 em(15px) 0;
         font-size: em(20px);
         padding: em(5px);
