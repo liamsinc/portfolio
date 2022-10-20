@@ -541,18 +541,18 @@ a {
   border: 1px solid #00FFFF;
   border-radius: 0.3125em;
   padding: 1.875em; }
-  /* line 40, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  /* line 74, ../../../Documents/Netmatters/Portfolio/scss/utilities/_mixins.scss */
   .about__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 45, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  /* line 37, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
   .about__item-content {
     margin-bottom: 1.25em; }
 
-/* line 49, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 41, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about-link {
   color: #00FFFF; }
-  /* line 51, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  /* line 43, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
   .about-link:hover {
     text-decoration: underline;
     text-decoration-color: #00FFFF; }
@@ -586,6 +586,17 @@ a {
   border-radius: 0.3125em;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.3125em; }
+
+/* line 28, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__item {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00FFFF;
+  border-radius: 0.3125em;
+  padding: 1.875em; }
+  /* line 74, ../../../Documents/Netmatters/Portfolio/scss/utilities/_mixins.scss */
+  .coding__item-title {
+    color: #00FFFF;
+    margin-bottom: 0.9375em; }
 
 /* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__section {
@@ -629,18 +640,18 @@ a {
   border: 1px solid #00FFFF;
   border-radius: 0.3125em;
   padding: 1.875em; }
-  /* line 40, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 74, ../../../Documents/Netmatters/Portfolio/scss/utilities/_mixins.scss */
   .scs__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 45, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 37, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__item > p, .scs__item > ul > li {
     margin-bottom: 0.625em; }
 
-/* line 51, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 43, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__treehouse {
   color: #00FFFF; }
-  /* line 53, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 45, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__treehouse:hover {
     text-decoration: underline; }
 

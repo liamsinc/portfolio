@@ -24,4 +24,8 @@
         background-color: rgba($color: $black, $alpha: 0.5);
         padding: em(5px);
     }
+
+    &__item {
+        @include page-item-div-styles();
+    }
 }
