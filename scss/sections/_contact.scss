@@ -11,7 +11,7 @@
 
     &__title {
         color: $aqua;
-        margin: em(15px);
+        margin: em(15px) 0;
         padding: em(5px);
         background-color: rgba($color: $black, $alpha: 0.5);
         border-radius: em(5px);
@@ -19,16 +19,15 @@
 
     &__subtitle {
         color: $aqua;
-        margin: 0 em(25px) em(15px);
+        margin: 0 0 em(15px) 0;
         font-size: em(20px);
+        padding: em(5px);
         background-color: rgba($color: $black, $alpha: 0.5);
         border-radius: em(5px);
-        padding: em(5px);
     }
 
     &__form {
         margin-bottom: em(50px);
-        padding: 0 em(30px);
         display: flex;
         flex-direction: column;
         justify-content: center;

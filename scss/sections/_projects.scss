@@ -22,7 +22,7 @@
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         row-gap: em(30px);
         column-gap: em(30px);
         flex-wrap: wrap;
@@ -48,8 +48,8 @@
             width: 47%;
         }
 
-        @include media-query (large) {
-            width: 29%;
+        @include media-query (x-large) {
+            width: 31%;
         }
     }
 
