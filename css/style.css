@@ -354,6 +354,54 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 1.25em; }
 
+/* line 45, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 4.375em;
+  border-radius: 0.3125em;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0.9375em; }
+  /* line 56, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+  .hamburger > span {
+    background: #00FFFF;
+    border-radius: 0.625em;
+    height: 0.4375em;
+    margin: 0.4375em 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+    /* line 63, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+    .hamburger > span:nth-of-type(1) {
+      width: 50%; }
+    /* line 67, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+    .hamburger > span:nth-of-type(2) {
+      width: 100%; }
+    /* line 71, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+    .hamburger > span:nth-of-type(3) {
+      width: 75%; }
+
+/* line 77, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+input[type="checkbox"] {
+  display: none; }
+
+/* line 81, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px); }
+
+/* line 86, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg); }
+
+/* line 91, ../../../Documents/Netmatters/Portfolio/scss/sections/_hero.scss */
+input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(30px, -11px) rotatez(45deg); }
+
 /* line 7, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__section {
   border-bottom: 1px solid #00FFFF;
