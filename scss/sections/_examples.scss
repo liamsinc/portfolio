@@ -8,7 +8,7 @@
 
     &__header {
         @include sibling-page-header-styles();
-        background-image: url(../img/singularity.jpg);
+        background-image: url(../img/helix.jpg);
         @include background-image-styles();
     }
 
