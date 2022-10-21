@@ -83,3 +83,19 @@
     background-size: cover;
     position: relative;
 }
+
+@mixin section-title-styles() {
+	font-size: em(30px);
+	margin: em(15px) 0;
+	padding: em(5px);
+	background-color: rgba($color: $black, $alpha: 0.5);
+	border-radius: em(5px);
+}
+
+@mixin section-subtitle-styles() {
+	font-size: em(20px);
+	margin: em(15px) 0;
+	padding: em(5px);
+	background-color: rgba($color: $black, $alpha: 0.5);
+	border-radius: em(5px);
+}

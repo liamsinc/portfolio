@@ -27,15 +27,27 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
         <header class="header">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <h1 class="header__logo-link"><a href="index.html" title="Home">LS</a></h1>
+                    <h1 class="header__logo-link">
+                        <a href="index.html" title="Home">LS</a>
+                    </h1>
                 </div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
-                        <li class="header__nav-item"><a href="about.html" title="Learn more about me!">About Me</a></li>
-                        <li class="header__nav-item"><a href="index.html#portfolio" title="See my projects!">My Portfolio</a></li>
-                        <li class="header__nav-item"><a href="examples.html" title="View my code snippets!">Coding Examples</a></li>
-                        <li class="header__nav-item"><a href="scs.html" title="Learn more about the Netmatters SCS Scheme!">SCS Scheme</a></li>
-                        <li class="header__nav-item"><a href="index.html#contact" title="Send me a message!">Contact Me</a></li>
+                        <li class="header__nav-item">
+                            <a href="about.html" title="Learn more about me!">About Me</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="index.html#portfolio" title="See my projects!">My Portfolio</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="examples.html" title="View my code snippets!">Coding Examples</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="scs.html" title="Learn more about the Netmatters SCS Scheme!">SCS Scheme</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="index.html#contact" title="Send me a message!">Contact Me</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__socials">
@@ -55,63 +67,63 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
         <div class="main">
             <section class="hero__section">
                 <div class="hero__content container">
-                    <h1>My Name is Liam Sinclair</h1>
+                    <h2>My Name is Liam Sinclair</h2>
                     <p>I'm a software/web developer</p>
                 </div>
             </section>
             <section class="project__section" id="portfolio">
-                <h1 class="project__heading">My Projects</h1>
+                <h2 class="project__heading">My Projects</h2>
                 <div class="project__content container">
                     <div class="project__item">
                         <a href="https://github.com/liamsinc/html-css-reflection" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">HTML/CSS Reflection</h1>
+                                <h2 class="project__title">HTML/CSS Reflection</h2>
                                 <p class="project__desc">Netmatters Website Reflection</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
                         <a href="https://github.com/liamsinc/portfolio" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">Portfolio Website</h1>
+                                <h2 class="project__title">Portfolio Website</h2>
                                 <p class="project__desc">The website you see before you!</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
                         <a href="#" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">Project Three</h1>
+                                <h2 class="project__title">Project Three</h2>
                                 <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
                         <a href="#" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">Project Four</h1>
+                                <h2 class="project__title">Project Four</h2>
                                 <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
                         <a href="#" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">Project Five</h1>
+                                <h2 class="project__title">Project Five</h2>
                                 <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
                     </div>
                     <div class="project__item">
                         <a href="#" target="_blank" title="See the source code on GitHub!">
-                            <img class="project__img" src="img/project-img.jpg">
+                            <img class="project__img" src="img/project-img.jpg" alt="project image">
                             <div class="project__text">
-                                <h1 class="project__title">Project Six</h1>
+                                <h2 class="project__title">Project Six</h2>
                                 <p class="project__desc">PROJECT DESCRIPTION</p> 
                             </div>
                         </a>
@@ -120,7 +132,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
             </section>
             <section class="contact__section">
                 <div class="contact__content container">
-                    <h1 class="contact__title">Contact Form</h1>
+                    <h2 class="contact__title">Contact Form</h2>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
                     <form class="contact__form" id="contact">
                         <label class="contact__label required" for="name">Name</label>

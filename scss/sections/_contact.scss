@@ -6,23 +6,16 @@
         @include background-image-styles();
     }
 
-    &__title {
+    &__title { 
+        @include section-title-styles();
         color: $aqua;
-        margin: em(15px) 0;
-        padding: em(5px);
-        background-color: rgba($color: $black, $alpha: 0.5);
-        border-radius: em(5px);
     }
 
     &__subtitle {
+        @include section-subtitle-styles();
         color: $white;
         text-shadow: 0 0 10px $aqua;
         font-weight: $font-weight--bold;
-        margin: 0 0 em(15px) 0;
-        font-size: em(20px);
-        padding: em(5px);
-        background-color: rgba($color: $black, $alpha: 0.5);
-        border-radius: em(5px);
     }
 
     &__form {

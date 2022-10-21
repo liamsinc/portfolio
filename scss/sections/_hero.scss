@@ -21,7 +21,8 @@
         color: $black;
         text-shadow: 0 0 15px $aqua;
 
-        & > h1{
+        & > h2 {
+            font-size: em(30px);
             @include hero-text-styling();
         }
         

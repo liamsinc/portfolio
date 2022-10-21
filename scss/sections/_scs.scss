@@ -3,7 +3,7 @@
         text-align: center;
         background-image: url(../img/singularity.jpg);
         @include background-image-styles();
-        min-height: 100vh; // Only until content is inserted
+        min-height: 100vh;
     }
 
     &__header {
@@ -14,9 +14,7 @@
 
     &__title {
         color: $aqua;
-        border-radius: em(3px);
-        background-color: rgba($color: $black, $alpha: 0.5);
-        padding: em(5px);
+        @include section-title-styles();
     }
 
     &__content {

@@ -3,7 +3,7 @@
         text-align: center;
         background-image: url(../img/milky-way.jpg);
         @include background-image-styles();
-        min-height: 100vh; // Only until content is inserted
+        min-height: 100vh;
     }
 
     &__header {
@@ -13,10 +13,8 @@
     }
 
     &__title {
+        @include section-title-styles();
         color: $aqua;
-        background-color: rgba($color: $black, $alpha: 0.5);
-        border-radius: em(5px);
-        padding: em(5px);
     }
 
     &__content {
