@@ -17,6 +17,7 @@
         @include sibling-page-header-styles();
         background-image: url(../img/earth.jpg);
         @include background-image-styles();
+        @include hamburger-icon-styles(25px)
     }
 
     // Page header title
@@ -58,3 +59,4 @@
         }
     }
 }
+
