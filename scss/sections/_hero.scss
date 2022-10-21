@@ -1,4 +1,9 @@
+// Handles the hero section on the homepage (index.html)
+
 .hero {
+
+    // Section container
+
     &__section {
         display: flex;
         align-items: center;
@@ -11,6 +16,8 @@
 
         border-bottom: 1px solid $aqua;
     }
+
+    // Handles the content over the hero image (the text)
 
     &__content {
         display: flex;

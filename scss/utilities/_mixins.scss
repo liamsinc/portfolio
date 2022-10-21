@@ -28,11 +28,14 @@
 	}
 }
 
+// Basic flex setup
 
 @mixin flex-template {
 	display: flex;
 	justify-content: center;
 }
+
+// Defines the horizontal page headers on all pages except the homepage.
 
 @mixin sibling-page-header-styles {
 	height: em(150px);
@@ -42,12 +45,16 @@
 	align-items: center;
 }
 
+// Styles the hero text on the homepage.
+
 @mixin hero-text-styling {
 	width: fit-content;
 	padding: em(5px);
 	border-radius: em(5px);
 	background-color: rgba($color: $black, $alpha: 0.5);
 }
+
+// Uses a conditional mixin to apply styles to social icons on vertical header
 
 @mixin social-styles ($type) {
 	font-size: em(35px);
@@ -65,6 +72,8 @@
 	}
 }
 
+// Styles the containers for divs (text section) on pages other than the homepage (about, examples, scs)
+
 @mixin page-item-div-styles() {
 	background-color: rgba($color: $black, $alpha: 0.5);
 	border: 1px solid $aqua;
@@ -77,12 +86,16 @@
 	}
 }
 
+// Applies common styles where background-image rule is used.
+
 @mixin background-image-styles() {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
+
+// Handles the styling of horizontal header titles on all pages
 
 @mixin section-title-styles() {
 	font-size: em(30px);
@@ -91,6 +104,8 @@
 	background-color: rgba($color: $black, $alpha: 0.5);
 	border-radius: em(5px);
 }
+
+// Handles styling of subtitles, such as on the contact form
 
 @mixin section-subtitle-styles() {
 	font-size: em(20px);

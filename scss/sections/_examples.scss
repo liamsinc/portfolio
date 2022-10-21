@@ -1,4 +1,9 @@
+// Handles styling for the coding examples page (examples.html)
+
 .coding {
+
+    // Section container
+
     &__section {
         text-align: center;
         background-image: url(../img/earth-center.jpg);
@@ -6,16 +11,22 @@
         min-height: 100vh;
     }
 
+    // Horizontal page header
+
     &__header {
         @include sibling-page-header-styles();
         background-image: url(../img/helix.jpg);
         @include background-image-styles();
     }
 
+    // Page header title
+
     &__title {
         color: $aqua;
         @include section-title-styles();
     }
+
+    // Page items (divs)
 
     &__item {
         @include page-item-div-styles();
