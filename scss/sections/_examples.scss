@@ -19,5 +19,9 @@
 
     &__item {
         @include page-item-div-styles();
+
+        &-title {
+            font-size: em(30px);
+        }
     }
 }

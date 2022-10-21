@@ -1,4 +1,7 @@
 .scs {
+
+    // Containing section
+
     &__section {
         text-align: center;
         background-image: url(../img/singularity.jpg);
@@ -6,16 +9,22 @@
         min-height: 100vh;
     }
 
+    // Horizontal page header
+
     &__header {
         @include sibling-page-header-styles();
         background-image: url(../img/supernova.jpg);
         @include background-image-styles();
     }
 
+    // Page header title
+
     &__title {
         color: $aqua;
         @include section-title-styles();
     }
+
+    // Page content
 
     &__content {
         display: flex;
@@ -23,14 +32,22 @@
         row-gap: em(30px);
     }
 
+    // Page items (divs)
+
     &__item {
         @include page-item-div-styles();
+
+        &-title {
+            font-size: em(30px);
+        }
 
         & > p, & > ul > li {
             margin-bottom: em(10px);
         }
 
     }
+
+    // Treehouse link
 
     &__treehouse {
         color: $aqua;

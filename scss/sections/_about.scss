@@ -1,4 +1,7 @@
 .about {
+
+    // Containing section
+
     &__section {
         text-align: center;
         background-image: url(../img/milky-way.jpg);
@@ -6,16 +9,22 @@
         min-height: 100vh;
     }
 
+    // Horizontal page header
+
     &__header {
         @include sibling-page-header-styles();
         background-image: url(../img/earth.jpg);
         @include background-image-styles();
     }
 
+    // Page header title
+
     &__title {
         @include section-title-styles();
         color: $aqua;
     }
+
+    // Content container
 
     &__content {
         display: flex;
@@ -23,13 +32,22 @@
         row-gap: em(30px);
     }
 
+    // Page items (divs)
+
     &__item {
         @include page-item-div-styles();
+
+        &-title {
+            font-size: em(30px);
+        }
 
         &-content {
             margin-bottom: em(20px);
         }
     }
+
+    // SCS link
+    
     &-link {
         color: $aqua;
         &:hover {

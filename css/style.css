@@ -513,7 +513,7 @@ a {
   content: ' *';
   color: red; }
 
-/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 5, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__section {
   text-align: center;
   background-image: url(../img/milky-way.jpg);
@@ -523,7 +523,7 @@ a {
   position: relative;
   min-height: 100vh; }
 
-/* line 9, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 14, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__header {
   height: 9.375em;
   border-bottom: 1px solid #00FFFF;
@@ -536,7 +536,7 @@ a {
   background-size: cover;
   position: relative; }
 
-/* line 15, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 22, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__title {
   font-size: 1.875em;
   margin: 0.9375em 0;
@@ -545,13 +545,13 @@ a {
   border-radius: 0.3125em;
   color: #00FFFF; }
 
-/* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__content {
   display: flex;
   flex-direction: column;
   row-gap: 1.875em; }
 
-/* line 26, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 37, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about__item {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #00FFFF;
@@ -561,14 +561,17 @@ a {
   .about__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  /* line 40, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  .about__item-title {
+    font-size: 1.875em; }
+  /* line 44, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
   .about__item-content {
     margin-bottom: 1.25em; }
 
-/* line 33, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+/* line 51, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
 .about-link {
   color: #00FFFF; }
-  /* line 35, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
+  /* line 53, ../../../Documents/Netmatters/Portfolio/scss/sections/_about.scss */
   .about-link:hover {
     text-decoration: underline;
     text-decoration-color: #00FFFF; }
@@ -615,8 +618,11 @@ a {
   .coding__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
+  /* line 23, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+  .coding__item-title {
+    font-size: 1.875em; }
 
-/* line 2, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 5, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__section {
   text-align: center;
   background-image: url(../img/singularity.jpg);
@@ -626,7 +632,7 @@ a {
   position: relative;
   min-height: 100vh; }
 
-/* line 9, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 14, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__header {
   height: 9.375em;
   border-bottom: 1px solid #00FFFF;
@@ -639,7 +645,7 @@ a {
   background-size: cover;
   position: relative; }
 
-/* line 15, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 22, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__title {
   color: #00FFFF;
   font-size: 1.875em;
@@ -648,13 +654,13 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.3125em; }
 
-/* line 20, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__content {
   display: flex;
   flex-direction: column;
   row-gap: 1.875em; }
 
-/* line 26, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 37, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__item {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #00FFFF;
@@ -664,14 +670,17 @@ a {
   .scs__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 40, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  .scs__item-title {
+    font-size: 1.875em; }
+  /* line 44, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__item > p, .scs__item > ul > li {
     margin-bottom: 0.625em; }
 
-/* line 35, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+/* line 52, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__treehouse {
   color: #00FFFF; }
-  /* line 37, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
+  /* line 54, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
   .scs__treehouse:hover {
     text-decoration: underline; }
 
