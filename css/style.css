@@ -371,9 +371,10 @@ a {
   margin: 0.9375em 0;
   padding: 0.3125em;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.3125em; }
+  border-radius: 0.3125em;
+  color: #00FFFF; }
 
-/* line 15, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+/* line 16, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__content {
   display: flex;
   flex-direction: column;
@@ -382,48 +383,48 @@ a {
   column-gap: 1.875em;
   flex-wrap: wrap; }
   @media (min-width: 576px) {
-    /* line 15, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+    /* line 16, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
     .project__content {
       flex-direction: row; } }
 
-/* line 28, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+/* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__item {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   border: 1px solid #00FFFF;
   border-radius: 0.3125em;
   padding-bottom: 0.625em; }
-  /* line 35, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+  /* line 36, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
   .project__item:hover {
     box-shadow: 0 0 15px #00FFFF;
     background-color: #000; }
-    /* line 38, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+    /* line 39, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
     .project__item:hover .project__title {
       text-shadow: 0 0 15px #00FFFF; }
-    /* line 41, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+    /* line 42, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
     .project__item:hover .project__desc {
       color: #00FFFF; }
   @media (min-width: 576px) {
-    /* line 28, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+    /* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
     .project__item {
       width: 47%; } }
   @media (min-width: 1200px) {
-    /* line 28, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+    /* line 29, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
     .project__item {
       width: 31%; } }
 
-/* line 55, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+/* line 56, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__title {
   font-size: 1.875em; }
 
-/* line 59, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+/* line 60, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__text {
   display: flex;
   flex-direction: column;
   row-gap: 0.625em;
   margin: 0.625em 0.625em; }
 
-/* line 66, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
+/* line 67, ../../../Documents/Netmatters/Portfolio/scss/sections/_projects.scss */
 .project__img {
   width: 100%;
   border-bottom: 1px solid #00FFFF;

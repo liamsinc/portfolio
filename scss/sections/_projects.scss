@@ -10,6 +10,7 @@
     &__heading {
         text-align: center;
         @include section-title-styles();
+        color: $aqua;
     }
 
     &__content {
