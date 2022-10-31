@@ -83,6 +83,20 @@
             color: $black;
         }
     }
+
+    &__message {
+        @include section-subtitle-styles();
+        border: 3px solid transparent;
+        background-color: rgba($color: $black, $alpha: 0.5);
+    }
+
+    &__error {
+        align-self: flex-start;
+        color: $errorRed;
+        padding: em(5px);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        border-radius: em(5px);
+    }
 }
 
 // Adds red asterisk after required field labels

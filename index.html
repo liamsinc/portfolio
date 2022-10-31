@@ -74,7 +74,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 </label>
                 <div class="hero__content container">
                     <h2 class="animate-typing">My Name is Liam Sinclair</h2>
-                    <p class="animate-typing">I'm a software/web developer</p>
+                    <p class="animate-typing">I'm a software/web developer!</p>
                 </div>
             </section>
             <section class="project__section" id="portfolio">
@@ -140,15 +140,23 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 <div class="contact__content container">
                     <h2 class="contact__title">Contact Form</h2>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
+                    <div class="contact__message"></div>
                     <form class="contact__form" id="contact">
                         <label class="contact__label required" for="name">Name</label>
                         <input class="contact__input" type="text" id="name" name="name" placeholder="Please enter your first name&hellip;">
+                        <p class="contact__error err-name"></p>
                         <label class="contact__label required" for="email">Email</label>
                         <input class="contact__input" type="email" id="email" name="email" placeholder="Please enter your email address&hellip;">
+                        <p class="contact__error err-email"></p>
+                        <label class="contact__label required" for="phone">Phone</label>
+                        <input class="contact__input" type="tel" id="phone" name="phone" placeholder="Please enter your phone number&hellip;">
+                        <p class="contact__error err-phone"></p>
                         <label class="contact__label required" for="subject">Subject</label>
                         <input class="contact__input" type="text" id="subject" name="subject" placeholder="Please enter your message subject&hellip;">
+                        <p class="contact__error err-subject"></p>
                         <label class="contact__label required" for="message">Message</label>
                         <textarea class="contact__input" id="message" rows="10" cols="30" placeholder="Please enter your message&hellip;"></textarea>
+                        <p class="contact__error err-message"></p>
                         <input class="contact__button" type="submit" value="Send Message" id="submit"> 
                     </form>
                 </div>
