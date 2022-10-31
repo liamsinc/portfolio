@@ -34,21 +34,18 @@
             border: 1px solid transparent;
             border-radius: em(5px);
 
-            &:hover {
-                text-shadow: 0 0 10px $aqua;
-                border-color: $aqua;
-            }
+            &:hover { @include header-hover-styles(); }
         }
     }
 
     // Navigation
 
     &__nav {
-        min-height: em(275px);
+        height: em(225px);
         border-bottom: 1px solid $aqua;
 
         &-list { 
-            margin: em(45px) 0;
+            margin: em(15px) 0;
             width: 85%
         }
 
@@ -59,10 +56,7 @@
             border: 1px solid transparent;
             border-radius: em(5px);
 
-            &:hover {
-                text-shadow: 0 0 10px $aqua;
-                border-color: $aqua;
-            }
+            &:hover { @include header-hover-styles(); }
         }
     }
 
@@ -77,6 +71,7 @@
         background-color: rgba($color: $black, $alpha: 0.5);
         border-radius: em(5px);
         margin: em(15px);
+        width: 85%;
 
         & > a {
             .github-icon {@include social-styles(github);}
@@ -94,7 +89,8 @@
 
         &-1, &-2 {
             background-color: rgba($color: $black, $alpha: 0.5);
-            margin: 0 em(15px);  
+            margin: 0 em(17px);
+            width: 85%;
         }
 
         &-1 {

@@ -73,6 +73,14 @@
 	}
 }
 
+// Styles some header elements while in hover state:
+
+@mixin header-hover-styles() {
+	text-shadow: 0 0 10px $aqua;
+	border-color: $aqua;
+	background-color: $black;
+} 
+
 // Styles the containers for divs (text section) on pages other than the homepage (about, examples, scs)
 
 @mixin page-item-div-styles() {

@@ -35,3 +35,36 @@ $(window).resize(function () {
 });
 
 // SIDE MENU JAVASCRIPT/JQUERY END ----------------------------------------------------------------
+
+// GENERIC JAVASCRIPT/JQUERY START ----------------------------------------------------------------
+
+// Color variable used for active nav link:
+const aqua = '#00FFFF';
+
+// When the page loads, get the URL and apply active styles to relevant nav link:
+$(document).ready(function () {
+    const currentURL = window.location.href;
+    if (currentURL.endsWith('index.html') || currentURL.endsWith('#portfolio') || currentURL.endsWith('#contact')) {
+        $('#home-link').css({
+            color: aqua,
+            textDecoration: 'underline'
+        });
+    } else if (currentURL.endsWith('about.html')) {
+        $('#about-link').css({
+            color: aqua,
+            textDecoration: 'underline'
+        });
+    } else if (currentURL.endsWith('examples.html')) {
+        $('#examples-link').css({
+            color: aqua,
+            textDecoration: 'underline'
+        });
+    } else {
+        $('#scs-link').css({
+            color: aqua,
+            textDecoration: 'underline'
+        });
+    }
+});
+
+// GENERIC JAVASCRIPT/JQUERY END ------------------------------------------------------------------
