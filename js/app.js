@@ -5,6 +5,7 @@ Functionally seperate code will be seperated into sections by "// COMMENTS -----
 
 // FUNCTIONS ------------------------------------------------------------------------------------------
 
+// Used in side menu section
 function closeSideMenu() {
     if ($('.header').is(':visible') && window.innerWidth < 768){
         $('#check').prop('checked', false);
@@ -17,6 +18,13 @@ function closeSideMenu() {
 // Local color variables used when styling form message:
 const successGreen = '#66FF00';
 const errorRed = '#EE4B2B';
+
+// Are the form fields valid?
+let nameValid = true;
+let emailValid = true;
+let phoneValid = true;
+let subjectValid = true;
+let messageValid = true;
 
 // Is the form valid?
 let formValid = true;
@@ -41,11 +49,24 @@ $('.contact__button').on('click', (event) => {
     event.preventDefault();
 
     // Grab data from form fields, trimming leading and trailing whitespace:
-    const name = $('#name').val().trim();
-    const email = $('#email').val().trim();
-    const phone = $('#phone').val().trim();
-    const subject = $('#subject').val().trim();
-    const message = $('#message').val().trim();
+    let name = $('#name').val().trim();
+    let email = $('#email').val().trim();
+    let phone = $('#phone').val().trim();
+    let subject = $('#subject').val().trim();
+    let message = $('#message').val().trim();
+
+    // Configure settings for DOMPurify
+    const config = {
+        ALLOWED_TAGS: ['', ''],
+        KEEP_CONTENT: true
+    };
+
+    // Sanitize the user input
+    name = DOMPurify.sanitize(name, config);
+    email = DOMPurify.sanitize(email, config);
+    phone = DOMPurify.sanitize(phone, config);
+    subject = DOMPurify.sanitize(subject, config);
+    message = DOMPurify.sanitize(message, config);
 
     // BEGIN FORM VALIDATION:
     
@@ -65,10 +86,10 @@ $('.contact__button').on('click', (event) => {
         $('.err-name')
             .text("Please enter your name!")
             .slideDown();
-        formValid = false;
+        nameValid = false;
     } else {
         $('.err-name').slideUp();
-        formValid = true;
+        nameValid = true;
     }
 
     /*
@@ -80,15 +101,15 @@ $('.contact__button').on('click', (event) => {
         $('.err-email')
             .text("Please enter your email!")
             .slideDown();
-        formValid = false;
+        emailValid = false;
     } else if (!email.match(emailRegex)) {
         $('.err-email')
             .text("Please enter a valid email!")
             .slideDown();
-        formValid = false;
+        emailValid = false;
     } else {
         $('.err-email').slideUp();
-        formValid = true;
+        emailValid = true;
     }
 
     /*
@@ -101,20 +122,20 @@ $('.contact__button').on('click', (event) => {
         $('.err-phone')
             .text("Please enter your phone number!")
             .slideDown();
-        formValid = false;
+        phoneValid = false;
     } else if (!phone.match(phoneCharRegex)) {
         $('.err-phone')
             .text("Please enter a valid phone number! (Prohibited characters)")
             .slideDown();
-        formValid = false;
+        phoneValid = false;
     } else if (!phone.match(phoneFormatRegex)) {
         $('.err-phone')
             .text("Please enter a valid phone number! (Invalid format)")
             .slideDown();
-        formValid = false;
+        phoneValid = false;
     } else { 
         $('.err-phone').slideUp(); 
-        formValid = true;
+        phoneValid = true;
     }
 
     /*
@@ -125,10 +146,10 @@ $('.contact__button').on('click', (event) => {
         $('.err-subject')
             .text("Please enter your subject!")
             .slideDown();
-        formValid = false;
+        subjectValid = false;
     } else {
         $('.err-subject').slideUp();
-        formValid = true;
+        subjectValid = true;
     }
 
     /*
@@ -139,12 +160,19 @@ $('.contact__button').on('click', (event) => {
         $('.err-message')
             .text("Please enter your message!")
             .slideDown();
-        formValid = false;
+        messageValid = false;
     } else {
         $('.err-message').slideUp();
-        formValid = true;
+        messageValid = true;
     }
 
+    // If all form fields are valid, then the form is valid:
+    if (nameValid && emailValid && phoneValid && subjectValid && messageValid) {
+        formValid = true;
+    } else {
+        formValid = false;
+    }
+        
     // END FORM VALIDATION
 
     /*
@@ -159,10 +187,10 @@ $('.contact__button').on('click', (event) => {
     /* 
     Sets the html content and styles dependant on form validation results.
     Using object literals to apply multiple css styles and use local variables:
-    */ 
+    */
     if (formValid) {
         $('.contact__message')
-            .html("<strong>Thank you! Your message has been submitted successfully!</strong>")
+            .html(`<strong>Thanks ${name}! Your message has been submitted successfully!</strong>`)
             .css({
                 color: successGreen,
                 borderColor: successGreen,
@@ -182,7 +210,7 @@ $('.contact__button').on('click', (event) => {
     Prevents the animation from repeatedly running in certain circumstances:
     */ 
     if($('.contact__message').is(":hidden")) {
-        $('.contact__message').slideDown(1000).delay(3000).slideUp();
+        $('.contact__message').slideDown(1000).delay(3000).slideUp();  
     }
 });
 
@@ -190,9 +218,10 @@ $('.contact__button').on('click', (event) => {
 
 // SIDE MENU JAVASCRIPT/JQUERY START ----------------------------------------------------------------
 
-// Unchecks the menu button on page reload:
+// Unchecks the menu button and clears form fields on page reload:
 $(document).ready(() => {
     $('#check').prop('checked', false);
+    $('.contact__input').val('');
 });
 
 // Open side menu when menu button clicked

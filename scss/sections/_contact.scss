@@ -6,7 +6,6 @@
 
     &__section {
         text-align: center;
-        border-bottom: 1px solid $aqua;
         background-image: url(../img/nebula.jpg);
         @include background-image-styles();
     }
@@ -30,7 +29,7 @@
     // The actual form
 
     &__form {
-        margin-bottom: em(50px);
+        // margin-bottom: em(50px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -42,7 +41,7 @@
 
     &__input {
         width: 100%;
-        border: 2px solid $aqua;
+        border: 3px solid $aqua;
         background-color: rgba($color: $black, $alpha: 0.5);
         color: $white;
         border-radius: em(5px);
@@ -74,7 +73,7 @@
     &__button {
         width: 100%;
         margin-top: em(10px);
-        padding: em(5px) em(10px);
+        padding: em(10px) em(10px);
         border: 2px solid $aqua;
         border-radius: em(5px);
         background-color: rgba($color: $black, $alpha: 0.5);

@@ -88,9 +88,14 @@
 
 @mixin page-item-div-styles() {
 	background-color: rgba($color: $black, $alpha: 0.5);
-	border: 1px solid $aqua;
+	border: 3px solid $aqua;
 	border-radius: em(5px);
 	padding: em(30px);
+
+	&:hover {
+		background-color: $black;
+		box-shadow: 0 0 15px $aqua;
+	}
 
 	&-title {
 		color: $aqua;
