@@ -212,3 +212,10 @@ $(window).resize(function () {
         $('.header').hide();
     }
 });
+
+// SIDE MENU JAVASCRIPT/JQUERY END ----------------------------------------------------------------
+
+// GENERIC JAVASCRIPT/JQUERY START ----------------------------------------------------------------
+
+// GENERIC JAVASCRIPT/JQUERY END ------------------------------------------------------------------
+
