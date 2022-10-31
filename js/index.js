@@ -176,3 +176,35 @@ $('.contact__button').click(function(event) {
 });
 
 // FORM JAVASCRIPT/JQUERY END -----------------------------------------------------------------------
+
+// SIDE MENU JAVASCRIPT/JQUERY START ----------------------------------------------------------------
+
+// Ensures the menu button is unchecked on page reload:
+$(document).ready(function() {
+    $('#check').prop('checked', false);
+});
+
+// Open side menu when menu button clicked
+$('#check').click(function() {
+    if ($('header').is(':visible')) {
+        $('header')
+            .hide(500)   
+    } else {
+        $('.header')
+            .css({width: 250})
+            .show(500);
+    } 
+});
+
+/* 
+If the viewport width is greater than 768px (medium breakpoint),
+uncheck the checkbox and ensure header width is 200px:
+*/
+$(window).resize(function () {
+    if (window.innerWidth >= 768) {
+        $('#check').prop('checked', false);
+        $('.header').css({width: 200}).show();
+    } else if (window.innerWidth < 768 && $('#check').prop('checked') === false) {
+        $('.header').hide();
+    }
+});
