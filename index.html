@@ -46,7 +46,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             <a href="scs.html" title="Learn more about the Netmatters SCS Scheme!" id="scs-link">SCS Scheme</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#contact" title="Send me a message!" id="contact-link">Contact Me</a>
+                            <a href="#form-anchor" title="Send me a message!" id="contact-link">Contact Me</a>
                         </li>
                     </ul>
                 </nav>
@@ -140,7 +140,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 <div class="contact__content container">
                     <h2 class="contact__title">Contact Form</h2>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
-                    <form class="contact__form" id="contact">
+                    <form class="contact__form">
                         <label class="contact__label required" for="name">Name</label>
                         <p class="contact__error err-name"></p>
                         <input class="contact__input" type="text" id="name" name="name" placeholder="Please enter your first name&hellip;">
@@ -153,7 +153,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                         <label class="contact__label required" for="subject">Subject</label>
                         <p class="contact__error err-subject"></p>
                         <input class="contact__input" type="text" id="subject" name="subject" placeholder="Please enter your message subject&hellip;">
-                        <label class="contact__label required" for="message">Message</label>
+                        <label class="contact__label required" for="message" id="form-anchor">Message</label>
                         <p class="contact__error err-message"></p>
                         <textarea class="contact__input" id="message" rows="5" cols="30" placeholder="Please enter your message&hellip;"></textarea>
                         <div class="contact__message"></div>
