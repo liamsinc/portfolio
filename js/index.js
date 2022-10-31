@@ -196,9 +196,13 @@ $('#check').click(function() {
     } 
 });
 
-/* 
-If the viewport width is greater than 768px (medium breakpoint),
-uncheck the checkbox and ensure header width is 200px:
+/*
+When a browser window resize event is triggered,
+check if the viewport width is greater than 768px.
+If true, uncheck the checkbox, set the header width back 
+to the default (200px) and show the header.
+Else if the viewport width is less than 768px AND the menu button is unchecked, 
+hide the header.
 */
 $(window).resize(function () {
     if (window.innerWidth >= 768) {
