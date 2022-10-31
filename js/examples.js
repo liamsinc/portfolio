@@ -37,10 +37,19 @@ $(window).resize(function () {
 // Color variable used for active nav link:
 const aqua = '#00FFFF';
 
-// When the page loads, get the URL and apply active styles to relevant nav link:
+/*
+When the page loads, get the URL and apply active styles to relevant nav link:
+The conditional will keep the homepage as the active link when "my portfolio" or "contact me" links are clicked, as the elements they refer to are on the same page. 
+The conditional also accounts for a bugs that occurs when the homepage is viewed via github pages or the cPanel domain (see fourth/fifth statement in the first conditional).
+*/
 $(document).ready(function () {
     const currentURL = window.location.href;
-    if (currentURL.endsWith('index.html') || currentURL.endsWith('#portfolio') || currentURL.endsWith('#contact')) {
+    if (currentURL.endsWith('index.html') ||
+        currentURL.endsWith('#portfolio') ||
+        currentURL.endsWith('#contact') ||
+        currentURL.endsWith('portfolio/') || // Fixes bug when page is loaded via github pages
+        currentURL.endsWith('scs.co.uk')) { // Fixes bug when page is loaded via cPanel domain
+
         $('#home-link').css({
             color: aqua,
             textDecoration: 'underline'
@@ -60,6 +69,8 @@ $(document).ready(function () {
             color: aqua,
             textDecoration: 'underline'
         });
+    } else {
+        alert(`Error: Cannot determine active link for ${currentURL}`);
     }
 });
 
