@@ -187,11 +187,9 @@ $(document).ready(function() {
 // Open side menu when menu button clicked
 $('#check').click(function() {
     if ($('header').is(':visible')) {
-        $('header')
-            .hide(500)   
+        $('header').hide(500)   
     } else {
-        $('.header')
-            .show(500);
+        $('.header').show(500);
     } 
 });
 
