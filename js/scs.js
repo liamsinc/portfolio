@@ -55,7 +55,7 @@ $(document).ready(function () {
             color: aqua,
             textDecoration: 'underline'
         });
-    } else {
+    } else if (currentURL.endsWith('scs.html')){
         $('#scs-link').css({
             color: aqua,
             textDecoration: 'underline'

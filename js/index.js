@@ -227,14 +227,14 @@ $(document).ready(function () {
     } else if (currentURL.endsWith('about.html')) {
         $('#about-link').css({
             color: aqua,
-            textDecoration: 'underline'
+            textDecoration: 'underline',
         });
     } else if (currentURL.endsWith('examples.html')) {
         $('#examples-link').css({
             color: aqua,
             textDecoration: 'underline'
         });
-    } else {
+    } else if (currentURL.endsWith('scs.html')){
         $('#scs-link').css({
             color: aqua,
             textDecoration: 'underline'
