@@ -13,7 +13,7 @@
     }
 
     // Some initial values
-    width: em(200px);
+    min-width: em(200px);
     min-height: 100vh;
     text-align: center;
     border-right: 1px solid $aqua;
@@ -44,10 +44,13 @@
     // Navigation
 
     &__nav {
-        height: em(275px);
+        min-height: em(275px);
         border-bottom: 1px solid $aqua;
 
-        &-list { margin: em(45px) 0; }
+        &-list { 
+            margin: em(45px) 0;
+            width: 85%
+        }
 
         &-item {
             margin-bottom: em(10px);
@@ -55,7 +58,6 @@
             padding: em(5px);
             border: 1px solid transparent;
             border-radius: em(5px);
-            height: em(30px);
 
             &:hover {
                 text-shadow: 0 0 10px $aqua;
@@ -71,7 +73,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: em(25px);
+        column-gap: em(30px);
         background-color: rgba($color: $black, $alpha: 0.5);
         border-radius: em(5px);
         margin: em(15px);

@@ -41,7 +41,8 @@
 	height: em(150px);
 	border-bottom: 1px solid $aqua;
 	display: flex;
-	justify-content: center;
+	justify-content: right;
+	padding-right: em(15px);
 	align-items: center;
 }
 

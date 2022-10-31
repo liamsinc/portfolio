@@ -18,6 +18,9 @@
         background-image: url(../img/helix.jpg);
         @include background-image-styles();
         @include hamburger-icon-styles(25px);
+        @include media-query (small) {
+            justify-content: center;
+        }
     }
 
     // Page header title
