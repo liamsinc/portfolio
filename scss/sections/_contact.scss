@@ -89,8 +89,9 @@
 
     &__message {
         @include section-subtitle-styles();
+        margin: em(10px) 0 0 0;
+        width: 100%;
         border: 3px solid transparent;
-        background-color: rgba($color: $black, $alpha: 0.5);
     }
 
     &__error {

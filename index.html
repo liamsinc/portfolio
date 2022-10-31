@@ -37,7 +37,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             <a href="about.html" title="Learn more about me!">About Me</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="index.html#portfolio" title="See my projects!">My Portfolio</a>
+                            <a href="#portfolio" title="See my projects!">My Portfolio</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="examples.html" title="See my code snippets!">Coding Examples</a>
@@ -46,7 +46,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             <a href="scs.html" title="Learn more about the Netmatters SCS Scheme!">SCS Scheme</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="index.html#contact" title="Send me a message!">Contact Me</a>
+                            <a href="#contact" title="Send me a message!">Contact Me</a>
                         </li>
                     </ul>
                 </nav>
@@ -140,7 +140,6 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 <div class="contact__content container">
                     <h2 class="contact__title">Contact Form</h2>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
-                    <div class="contact__message"></div>
                     <form class="contact__form" id="contact">
                         <label class="contact__label required" for="name">Name</label>
                         <p class="contact__error err-name"></p>
@@ -157,6 +156,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                         <label class="contact__label required" for="message">Message</label>
                         <p class="contact__error err-message"></p>
                         <textarea class="contact__input" id="message" rows="10" cols="30" placeholder="Please enter your message&hellip;"></textarea>
+                        <div class="contact__message"></div>
                         <input class="contact__button" type="submit" value="Send Message" id="submit">
                     </form>
                 </div>
