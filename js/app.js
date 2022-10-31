@@ -190,14 +190,14 @@ $('.contact__button').on('click', (event) => {
     */
     if (formValid) {
         $('.contact__message')
-            .html(`<strong>Thanks ${name}! Your message has been submitted successfully!</strong>`)
+            .html(`<strong>Thanks ${name}! Your message has been sent successfully!</strong>`)
             .css({
                 color: successGreen,
                 borderColor: successGreen,
             });
     } else {
         $('.contact__message')
-            .html("<strong>Form validation failed. Please check your input fields!</strong>")
+            .html("<strong>Oops! Please check your form fields!</strong>")
             .css({
                 color: errorRed,
                 borderColor: errorRed,
