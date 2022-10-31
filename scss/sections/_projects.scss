@@ -16,6 +16,7 @@
     &__heading {
         text-align: center;
         @include section-title-styles();
+        margin: em(15px) em(10px);
         color: $aqua;
     }
 
@@ -27,6 +28,7 @@
         justify-content: space-between;
         row-gap: em(30px);
         column-gap: em(30px);
+        margin: 0 em(22px);
         flex-wrap: wrap;
 
         @include media-query (small) {

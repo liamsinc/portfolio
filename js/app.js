@@ -3,6 +3,14 @@ This file holds all the javascript/jquery functionality for index.html (homepage
 Functionally seperate code will be seperated into sections by "// COMMENTS --------".
 */
 
+// FUNCTIONS ------------------------------------------------------------------------------------------
+
+function closeSideMenu() {
+    if ($('.header').is(':visible') && window.innerWidth < 768){
+        $('#check').prop('checked', false);
+        $('.header').hide(200);
+    }
+}
 
 // FORM JAVASCRIPT/JQUERY START -----------------------------------------------------------------------
 
@@ -13,20 +21,22 @@ const errorRed = '#EE4B2B';
 // Is the form valid?
 let formValid = true;
 
-// Regular expressions used to validate email and phone:
-// Is the email formatted correctly?
-const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i; 
-// Are there any prohibited characters in the phone number?
+/*
+Regular expressions used to validate email and phone:
+1. Is the email formatted correctly?
+2. Are there any prohibited characters in the phone number?
+3. Is the phone number in an accepted format?
+*/
+const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/; 
 const phoneCharRegex = /^[\d \-()]*$/; 
-// Is the phone number in an accepted format?
 const phoneFormatRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
 // Hide the contact form message and validation error elements by default:
 $('.contact__message').hide();
 $('.contact__error').hide();
 
-// When form submit button is clicked:
-$('.contact__button').click(function(event) {
+// When the form submit button is clicked:
+$('.contact__button').on('click', (event) => {
     // Prevent page reload:
     event.preventDefault();
 
@@ -138,8 +148,9 @@ $('.contact__button').click(function(event) {
     // END FORM VALIDATION
 
     /*
-    While formValid is false, the input field content does not reset upon submit.
-    When formValid is true, reset the contents of the input fields upon submit:
+    When formValid is true, reset the contents of the input fields upon submit.
+    Because I called event.preventDefault(), the page doesn't reload and thus the
+    form fields do not reset.
     */
     if (formValid) {
         $('.contact__input').val('');
@@ -147,7 +158,7 @@ $('.contact__button').click(function(event) {
 
     /* 
     Sets the html content and styles dependant on form validation results.
-    Using object literals to apply multiple css styles:
+    Using object literals to apply multiple css styles and use local variables:
     */ 
     if (formValid) {
         $('.contact__message')
@@ -179,15 +190,15 @@ $('.contact__button').click(function(event) {
 
 // SIDE MENU JAVASCRIPT/JQUERY START ----------------------------------------------------------------
 
-// Ensures the menu button is unchecked on page reload:
-$(document).ready(function() {
+// Unchecks the menu button on page reload:
+$(document).ready(() => {
     $('#check').prop('checked', false);
 });
 
 // Open side menu when menu button clicked
-$('#check').click(function() {
+$('#check').on('click', () => {
     if ($('header').is(':visible')) {
-        $('header').hide(500)   
+        $('header').hide(200)   
     } else {
         $('.header').show(500);
     } 
@@ -200,7 +211,7 @@ If true, uncheck the checkbox and show the header.
 Else if the viewport width is less than 768px AND the menu button is unchecked, 
 hide the header.
 */
-$(window).resize(function () {
+$(window).on('resize', () => {
     if (window.innerWidth >= 768) {
         $('#check').prop('checked', false);
         $('.header').show();
@@ -209,6 +220,11 @@ $(window).resize(function () {
     }
 });
 
+// Closes side menu on small devices when page local links are clicked:
+
+$('#portfolio-link').click(closeSideMenu);
+$('#contact-link').click(closeSideMenu);
+
 // SIDE MENU JAVASCRIPT/JQUERY END ----------------------------------------------------------------
 
 // GENERIC JAVASCRIPT/JQUERY START ----------------------------------------------------------------
@@ -216,19 +232,19 @@ $(window).resize(function () {
 // Color variable used for active nav link:
 const aqua = '#00FFFF';
 
-// When the page loads, get the URL and apply active styles to relevant nav link:
 /*
 When the page loads, get the URL and apply active styles to relevant nav link:
 The conditional will keep the homepage as the active link when "my portfolio" or "contact me" links are clicked, as the elements they refer to are on the same page. 
 The conditional also accounts for a bugs that occurs when the homepage is viewed via github pages or the cPanel domain (see fourth/fifth statement in the first conditional).
 */
-$(document).ready(function () {
+$(document).ready(() => {
     const currentURL = window.location.href;
     if (currentURL.endsWith('index.html') ||
         currentURL.endsWith('#portfolio') ||
         currentURL.endsWith('#contact') ||
         currentURL.endsWith('portfolio/') || // Fixes bug when page is loaded via github pages
-        currentURL.endsWith('scs.co.uk')) { // Fixes bug when page is loaded via cPanel domain
+        currentURL.endsWith('scs.co.uk') || // Fixes bug when page is loaded via cPanel domain
+        currentURL.endsWith(':5500/')) { // Fixes rare bug when page is loaded via VSC live server
 
         $('#home-link').css({
             color: aqua,
