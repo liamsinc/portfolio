@@ -1,3 +1,11 @@
+/*
+This file holds all the javascript/jquery functionality for index.html (homepage).
+Functionally seperate code will be seperated into sections by "// COMMENTS --------".
+*/
+
+
+// FORM JAVASCRIPT/JQUERY START -----------------------------------------------------------------------
+
 // Local color variables used when styling form message:
 const successGreen = '#66FF00';
 const errorRed = '#EE4B2B';
@@ -29,7 +37,7 @@ $('.contact__button').click(function(event) {
     const subject = $('#subject').val().trim();
     const message = $('#message').val().trim();
 
-    // FORM DATA VALIDATION START --------------------------------------------------
+    // BEGIN FORM VALIDATION:
     
     /*
     Note: The else clauses on each of these validation conditionals
@@ -127,11 +135,11 @@ $('.contact__button').click(function(event) {
         formValid = true;
     }
 
-    // FORM DATA VALIDATION END --------------------------------------------------
+    // END FORM VALIDATION
 
     /*
-    While formValid is false, the input field content does not reset upon clicking submit.
-    When formValid is true, reset the contents of the input fields.
+    While formValid is false, the input field content does not reset upon submit.
+    When formValid is true, reset the contents of the input fields upon submit:
     */
     if (formValid) {
         $('.contact__input').val('');
@@ -139,7 +147,7 @@ $('.contact__button').click(function(event) {
 
     /* 
     Sets the html content and styles dependant on form validation results.
-    Using object literals to apply multiple css styles.
+    Using object literals to apply multiple css styles:
     */ 
     if (formValid) {
         $('.contact__message')
@@ -160,10 +168,11 @@ $('.contact__button').click(function(event) {
     /*
     After setting the message and styles, animate the message transition,
     but only if the element is not already visible.
-    Prevents the animation from repeatedly running in certain circumstances.
+    Prevents the animation from repeatedly running in certain circumstances:
     */ 
     if($('.contact__message').is(":hidden")) {
         $('.contact__message').slideDown(1000).delay(3000).slideUp();
     }
 });
 
+// FORM JAVASCRIPT/JQUERY END -----------------------------------------------------------------------
