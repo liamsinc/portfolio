@@ -1,4 +1,3 @@
-
 // Local color variables used when styling form message:
 const successGreen = '#66FF00';
 const errorRed = '#EE4B2B';
@@ -6,10 +5,13 @@ const errorRed = '#EE4B2B';
 // Is the form valid?
 let formValid = true;
 
-// Regular expression used to validate email and phone:
-const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i; // Is the email formatted correctly?
-const phoneRegex1 = /^[\d \-()]*$/; // Are there any prohibited characters in the phone number?
-const phoneRegex2 = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Is the number in an accepted format?
+// Regular expressions used to validate email and phone:
+// Is the email formatted correctly?
+const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i; 
+// Are there any prohibited characters in the phone number?
+const phoneCharRegex = /^[\d \-()]*$/; 
+// Is the phone number in an accepted format?
+const phoneFormatRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
 // Hide the contact form message and validation error elements by default:
 $('.contact__message').hide();
@@ -28,6 +30,7 @@ $('.contact__button').click(function(event) {
     const message = $('#message').val().trim();
 
     // FORM DATA VALIDATION START --------------------------------------------------
+    
     /*
     Note: The else clauses on each of these validation conditionals
     simply hides any error messages that may already be present, assuming the
@@ -81,14 +84,14 @@ $('.contact__button').click(function(event) {
             .text("Please enter your phone number!")
             .slideDown();
         formValid = false;
-    } else if (!phone.match(phoneRegex1)) {
+    } else if (!phone.match(phoneCharRegex)) {
         $('.err-phone')
-            .text("Please enter a valid phone number! (Remove prohibited characters)")
+            .text("Please enter a valid phone number! (Prohibited characters)")
             .slideDown();
         formValid = false;
-    } else if (!phone.match(phoneRegex2)) {
+    } else if (!phone.match(phoneFormatRegex)) {
         $('.err-phone')
-            .text("Please enter a valid phone number! (Check the format)")
+            .text("Please enter a valid phone number! (Invalid format)")
             .slideDown();
         formValid = false;
     } else { 
@@ -157,12 +160,10 @@ $('.contact__button').click(function(event) {
     /*
     After setting the message and styles, animate the message transition,
     but only if the element is not already visible.
+    Prevents the animation from repeatedly running in certain circumstances.
     */ 
     if($('.contact__message').is(":hidden")) {
         $('.contact__message').slideDown(1000).delay(3000).slideUp();
     }
-
-    
-    
 });
 
