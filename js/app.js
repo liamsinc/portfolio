@@ -272,7 +272,7 @@ $(document).ready(() => {
         currentURL.endsWith('#portfolio') ||
         currentURL.endsWith('#form-anchor') ||
         currentURL.endsWith('portfolio/') || // Fixes bug when page is loaded via github pages
-        currentURL.endsWith('scs.co.uk') || // Fixes bug when page is loaded via cPanel domain
+        currentURL.endsWith('scs.co.uk/') || // Fixes bug when page is loaded via cPanel domain
         currentURL.endsWith(':5500/')) { // Fixes rare bug when page is loaded via VSC live server
 
         $('#home-link').css({
