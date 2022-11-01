@@ -62,6 +62,9 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                     <p class="header__copyright-1">&copy; 2022 Liam Sinclair.</p>
                     <p class="header__copyright-2">All Rights Reserved.</p>
                 </div>
+                <div class="header__excess">
+                    <button type="button" class="header__button">Scroll Up</button> 
+                </div>
             </div>
         </header>
         <div class="main">
@@ -140,21 +143,31 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                 <div class="contact__content container">
                     <h2 class="contact__title">Contact Form</h2>
                     <p class="contact__subtitle">Please don't hesitate to contact me via the form below!</p>
-                    <form class="contact__form">
-                        <label class="contact__label required" for="name">Name</label>
-                        <p class="contact__error err-name"></p>
+                    <form class="contact__form" method="POST" id="contact__form">
+                        <div class="label__container">
+                            <label class="contact__label required" for="name">Name</label>
+                            <p class="contact__error err-name"></p>
+                        </div>
                         <input class="contact__input" type="text" id="name" name="name" placeholder="Please enter your first name&hellip;">
-                        <label class="contact__label required" for="email">Email</label>
-                        <p class="contact__error err-email"></p>
+                        <div class="label__container">
+                            <label class="contact__label required" for="email">Email</label>
+                            <p class="contact__error err-email"></p>
+                        </div>
                         <input class="contact__input" type="email" id="email" name="email" placeholder="Please enter your email address&hellip;">
-                        <label class="contact__label required" for="phone">Phone</label>
-                        <p class="contact__error err-phone"></p>
+                        <div class="label__container">
+                            <label class="contact__label required" for="phone">Phone</label>
+                            <p class="contact__error err-phone"></p>
+                        </div>
                         <input class="contact__input" type="tel" id="phone" name="phone" placeholder="Please enter your phone number&hellip;">
-                        <label class="contact__label required" for="subject">Subject</label>
-                        <p class="contact__error err-subject"></p>
+                        <div class="label__container">
+                            <label class="contact__label required" for="subject">Subject</label>
+                            <p class="contact__error err-subject"></p>
+                        </div>
                         <input class="contact__input" type="text" id="subject" name="subject" placeholder="Please enter your message subject&hellip;">
-                        <label class="contact__label required" for="message" id="form-anchor">Message</label>
-                        <p class="contact__error err-message"></p>
+                        <div class="label__container">
+                            <label class="contact__label required" for="message" id="form-anchor">Message</label>
+                            <p class="contact__error err-message"></p>
+                        </div>
                         <textarea class="contact__input" id="message" rows="5" cols="30" placeholder="Please enter your message&hellip;"></textarea>
                         <div class="contact__message"></div>
                         <input class="contact__button" type="submit" value="Send Message" id="submit">

@@ -28,7 +28,7 @@
         justify-content: space-between;
         row-gap: em(30px);
         column-gap: em(30px);
-        margin: 0 em(22px);
+        margin: 0 em(20px);
         flex-wrap: wrap;
 
         @include media-query (small) {

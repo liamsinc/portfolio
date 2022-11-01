@@ -295,9 +295,25 @@ $(document).ready(() => {
             textDecoration: 'underline'
         });
     } else {
-        alert(`Error: Cannot determine active link for ${currentURL}`);
+        console.log(`Error: Cannot determine active link for ${currentURL}`);
     }
 });
+
+// Get the page height:
+const pageHeight = $(document.body).prop('scrollHeight');
+
+// Use the page height to ascertain whether to display the header button:
+if (pageHeight < 1000) {
+    $('.header__button').hide();
+} else {
+    $('.header__button').show();
+}
+
+// Handler for when Scroll Up button is clicked.
+$('.header__button').on('click', () => {
+    $(document.body).prop('scrollTop', 0);
+    $(document.documentElement).prop('scrollTop', 0);
+})
 
 // GENERIC JAVASCRIPT/JQUERY END ------------------------------------------------------------------
 

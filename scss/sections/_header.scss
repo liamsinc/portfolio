@@ -30,18 +30,18 @@
 
         &-link {
             background-color: rgba($color: $black, $alpha: 0.5);
-            padding: em(5px) em(6px);
+            padding: em(12px) em(13px);
             border: 1px solid transparent;
             border-radius: em(5px);
 
-            &:hover { @include header-hover-styles(); }
+            &:hover {@include header-hover-styles();}
         }
     }
 
     // Navigation
 
     &__nav {
-        height: em(225px);
+        height: em(242px);
         border-bottom: 1px solid $aqua;
 
         &-list { 
@@ -53,10 +53,20 @@
             margin-bottom: em(10px);
             background-color: rgba($color: $black, $alpha: 0.5);
             padding: em(5px);
-            border: 1px solid transparent;
+            border: 3px solid transparent;
             border-radius: em(5px);
 
-            &:hover { @include header-hover-styles(); }
+            &:hover { 
+                @include header-hover-styles(); 
+                &::before {
+                    content: '->';
+                    color: $aqua;
+                }
+                &::after {
+                    content: '<-';
+                    color: $aqua;
+                }
+            }
         }
     }
 
@@ -103,6 +113,31 @@
             padding: 0 0 em(5px) 0;
             border-bottom-left-radius: em(5px);
             border-bottom-right-radius: em(5px); 
+        }
+    }
+
+    &__excess {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 0;
+        width: 85%;
+        border: 3px solid $aqua;
+        border-radius: em(5px);
+        background-color: rgba($color: $black, $alpha: 0.5);
+        color: $white;
+        padding: em(10px);
+        margin-bottom: em(15px);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $aqua;
+            color: $black;
+            font-weight: $font-weight--bold;
+            box-shadow: 0 0 15px $aqua;
         }
     }
 }
