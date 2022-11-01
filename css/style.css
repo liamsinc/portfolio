@@ -523,7 +523,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 47.125em; }
+  min-height: 47.125em; }
 
 /* line 16, ../../../Documents/Netmatters/Portfolio/scss/sections/_contact.scss */
 .contact__title {
