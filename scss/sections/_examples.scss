@@ -34,9 +34,39 @@
 
     &__item {
         @include page-item-div-styles();
+        margin-bottom: em(30px);
 
         &-title {
             font-size: em(30px);
         }
     }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: em(30px);
+        text-align: left;
+    }
+    
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__snippet {
+        margin-right: em(30px);
+        border: 3px solid $aqua;
+        border-radius: em(5px);
+    }
+}
+
+.snip-1 {
+    width: em(550px);
+}
+
+.snip-2 {
+    width: em(550px);
+    height: em(150px);
 }

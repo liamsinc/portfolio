@@ -845,7 +845,8 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   border: 3px solid #00FFFF;
   border-radius: 0.3125em;
-  padding: 1.875em; }
+  padding: 1.875em;
+  margin-bottom: 1.875em; }
   /* line 95, ../../../Documents/Netmatters/Portfolio/scss/utilities/_mixins.scss */
   .coding__item:hover {
     background-color: #000;
@@ -854,9 +855,38 @@ a {
   .coding__item-title {
     color: #00FFFF;
     margin-bottom: 0.9375em; }
-  /* line 38, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+  /* line 39, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
   .coding__item-title {
     font-size: 1.875em; }
+
+/* line 44, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.875em;
+  text-align: left; }
+
+/* line 52, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 58, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.coding__snippet {
+  margin-right: 1.875em;
+  border: 3px solid #00FFFF;
+  border-radius: 0.3125em; }
+
+/* line 65, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.snip-1 {
+  width: 34.375em; }
+
+/* line 69, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.snip-2 {
+  width: 34.375em;
+  height: 9.375em; }
 
 /* line 7, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__section {
