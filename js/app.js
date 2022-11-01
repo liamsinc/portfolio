@@ -39,6 +39,9 @@ const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}
 const phoneCharRegex = /^[\d \-()]*$/; 
 const phoneFormatRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
+// Get the page height:
+const pageHeight = $(document.body).prop('scrollHeight');
+
 // Hide the contact form message and validation error elements by default:
 $('.contact__message').hide();
 $('.contact__error').hide();
@@ -210,7 +213,9 @@ $('.contact__button').on('click', (event) => {
     Prevents the animation from repeatedly running in certain circumstances:
     */ 
     if($('.contact__message').is(":hidden")) {
-        $('.contact__message').slideDown(1000).delay(3000).slideUp();  
+        $('.contact__button').slideUp(500);
+        $('.contact__message').slideDown(500).delay(3000).slideUp();
+        $('.contact__button').delay(3000).slideDown(500);
     }
 });
 
@@ -298,9 +303,6 @@ $(document).ready(() => {
         console.log(`Error: Cannot determine active link for ${currentURL}`);
     }
 });
-
-// Get the page height:
-const pageHeight = $(document.body).prop('scrollHeight');
 
 // Use the page height to ascertain whether to display the header button:
 if (pageHeight < 1000) {

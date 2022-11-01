@@ -8,6 +8,7 @@
         text-align: center;
         background-image: url(../img/nebula.jpg);
         @include background-image-styles();
+        height: em(754px);
     }
 
     // Section title "Contact Form"
