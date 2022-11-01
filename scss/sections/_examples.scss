@@ -51,22 +51,38 @@
     
     &__wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+
+        @include media-query (x-large) {
+            flex-direction: row;
+        }
     }
-    
+
     &__snippet {
-        margin-right: em(30px);
+        margin-bottom: em(30px);
         border: 3px solid $aqua;
         border-radius: em(5px);
+
+        @include media-query (x-large) {
+            margin-right: em(30px);
+        }
     }
 }
 
 .snip-1 {
-    width: em(550px);
+    width: 100%;
+    @include media-query (x-large) {
+        width: em(550px);
+    }
+    
 }
 
 .snip-2 {
-    width: em(550px);
-    height: em(150px);
+    width: 100%;
+    @include media-query (x-large) {
+        width: em(550px);
+        height: em(150px);
+    }
 }
