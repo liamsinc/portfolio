@@ -64,22 +64,20 @@ $('.contact__button').on('click', (event) => {
         KEEP_CONTENT: true
     };
 
-    // Sanitize the user input
+    // Sanitize the user input (name will be displayed in HTML later, protects against XSS)
     name = DOMPurify.sanitize(name, config);
     email = DOMPurify.sanitize(email, config);
     phone = DOMPurify.sanitize(phone, config);
     subject = DOMPurify.sanitize(subject, config);
     message = DOMPurify.sanitize(message, config);
 
+    // Ensure error message styles are reset:
+    $('.contact__error').css({
+        color: errorRed,
+        textShadow: '0 0 10px', errorRed
+    });
+
     // BEGIN FORM VALIDATION:
-    
-    /*
-    Note: The else clauses on each of these validation conditionals
-    simply hides any error messages that may already be present, assuming the
-    given value passes validation. It then sets formValid to true as
-    the value may have been set to false by a previous validation error despite form
-    field errors being corrected.
-    */
 
     /* 
     NAME:
@@ -90,8 +88,15 @@ $('.contact__button').on('click', (event) => {
             .text("Please enter your name!")
             .slideDown();
         nameValid = false;
-    } else {
-        $('.err-name').slideUp();
+    } else if (nameValid === false){
+        $('.err-name')
+            .css({
+                color: successGreen,
+                textShadow: '0 0 10px', successGreen
+            })
+            .text("Validation successful!")
+            .delay(2000)
+            .slideUp();
         nameValid = true;
     }
 
@@ -110,8 +115,15 @@ $('.contact__button').on('click', (event) => {
             .text("Please enter a valid email!")
             .slideDown();
         emailValid = false;
-    } else {
-        $('.err-email').slideUp();
+    } else if (emailValid === false) {
+        $('.err-email')
+            .css({
+                color: successGreen,
+                textShadow: '0 0 10px', successGreen
+            })
+            .text("Validation successful!")
+            .delay(2000)
+            .slideUp();
         emailValid = true;
     }
 
@@ -136,8 +148,15 @@ $('.contact__button').on('click', (event) => {
             .text("Please enter a valid phone number! (Invalid format)")
             .slideDown();
         phoneValid = false;
-    } else { 
-        $('.err-phone').slideUp(); 
+    } else if (phoneValid === false) { 
+        $('.err-phone')
+            .css({
+                color: successGreen,
+                textShadow: '0 0 10px', successGreen
+            })
+            .text("Validation successful!")
+            .delay(2000)
+            .slideUp();
         phoneValid = true;
     }
 
@@ -150,8 +169,15 @@ $('.contact__button').on('click', (event) => {
             .text("Please enter your subject!")
             .slideDown();
         subjectValid = false;
-    } else {
-        $('.err-subject').slideUp();
+    } else if (subjectValid === false){
+        $('.err-subject')
+            .css({
+                color: successGreen,
+                textShadow: '0 0 10px', successGreen
+            })
+            .text("Validation successful!")
+            .delay(2000)
+            .slideUp();
         subjectValid = true;
     }
 
@@ -164,8 +190,15 @@ $('.contact__button').on('click', (event) => {
             .text("Please enter your message!")
             .slideDown();
         messageValid = false;
-    } else {
-        $('.err-message').slideUp();
+    } else if (messageValid === false) {
+        $('.err-message')
+            .css({
+                color: successGreen,
+                textShadow: '0 0 10px', successGreen
+            })
+            .text("Validation successful!")
+            .delay(2000)
+            .slideUp()
         messageValid = true;
     }
 
@@ -210,6 +243,7 @@ $('.contact__button').on('click', (event) => {
     /*
     After setting the message and styles, animate the message transition,
     but only if the element is not already visible.
+    Manipulates the submit button.
     Prevents the animation from repeatedly running in certain circumstances:
     */ 
     if($('.contact__message').is(":hidden")) {

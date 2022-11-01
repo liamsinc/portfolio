@@ -63,7 +63,6 @@
         background-color: rgba($color: $black, $alpha: 0.5);
         padding: em(5px);
         border-radius: em(5px);
-        margin-right: em(10px);
         cursor: pointer;
         display: flex;
         
@@ -100,8 +99,10 @@
         align-self: flex-start;
         color: $errorRed;
         padding: em(5px);
-        background-color: rgba($color: $black, $alpha: 0.5);
+        margin-left: em(15px);
+        background-color: $black;
         border-radius: em(5px);
+        text-shadow: 0 0 10px $errorRed;
     }
 }
 
