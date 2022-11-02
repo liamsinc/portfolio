@@ -3,13 +3,32 @@ This file holds all the javascript/jquery functionality for index.html (homepage
 Functionally seperate code will be seperated into sections by "// COMMENTS --------".
 */
 
+// Get the page height:
+const pageHeight = $(document.body).prop('scrollHeight');
+
 // FUNCTIONS ------------------------------------------------------------------------------------------
 
-// Used in side menu section
+// Used in side menu section:
 function closeSideMenu() {
     if ($('.header').is(':visible') && window.innerWidth < 768){
         $('#check').prop('checked', false);
         $('.header').hide(200);
+    }
+}
+
+// Jumps to the top of the page:
+function jumpToTop() {
+    $(document.body).prop('scrollTop', 0);
+    $(document.documentElement).prop('scrollTop', 0);
+}
+
+// Checks if the header scroll button should be visible:
+function checkHeaderScroll() {
+    // Use the page height and width to ascertain whether to display the header scroll button:
+    if (pageHeight < 1000 || window.innerWidth < 768) {
+        $('.header__button').hide();
+    } else {
+        $('.header__button').show();
     }
 }
 
@@ -38,9 +57,6 @@ Regular expressions used to validate email and phone:
 const emailRegex = /^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/; 
 const phoneCharRegex = /^[\d \-()]*$/; 
 const phoneFormatRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-
-// Get the page height:
-const pageHeight = $(document.body).prop('scrollHeight');
 
 // Hide the contact form message and validation error elements by default:
 $('.contact__message').hide();
@@ -257,10 +273,11 @@ $('.contact__button').on('click', (event) => {
 
 // SIDE MENU JAVASCRIPT/JQUERY START ----------------------------------------------------------------
 
-// Unchecks the menu button and clears form fields on page reload:
+// Unchecks the menu button, clears form fields and checks header button on page reload:
 $(document).ready(() => {
     $('#check').prop('checked', false);
     $('.contact__input').val('');
+    checkHeaderScroll();
 });
 
 // Open side menu when menu button clicked
@@ -286,6 +303,7 @@ $(window).on('resize', () => {
     } else if (window.innerWidth < 768 && $('#check').prop('checked') === false) {
         $('.header').hide();
     }
+    checkHeaderScroll();
 });
 
 // Closes side menu on small devices when page local links are clicked:
@@ -338,18 +356,12 @@ $(document).ready(() => {
     }
 });
 
-// Use the page height to ascertain whether to display the header button:
-if (pageHeight < 1000) {
-    $('.header__button').hide();
-} else {
-    $('.header__button').show();
-}
 
-// Handler for when Scroll Up button is clicked.
-$('.header__button').on('click', () => {
-    $(document.body).prop('scrollTop', 0);
-    $(document.documentElement).prop('scrollTop', 0);
-})
+
+
+// Attaches pre-built function to scroll to the top of the page
+$('.header__button').on('click', jumpToTop);
+$('.mobile__scroll').on('click', jumpToTop);
 
 // GENERIC JAVASCRIPT/JQUERY END ------------------------------------------------------------------
 

@@ -72,8 +72,8 @@
 
     &__button {
         width: 100%;
-        margin-top: em(10px);
-        padding: em(10px) em(10px);
+        margin: em(10px) 0 em(18px) 0;
+        padding: em(10px);
         border: 3px solid $aqua;
         border-radius: em(5px);
         background-color: rgba($color: $black, $alpha: 0.5);
@@ -86,13 +86,22 @@
             font-weight: $font-weight--bold;
             box-shadow: 0 0 15px $aqua;
         }
+
+        @include media-query (medium) {
+            margin-bottom: 0;
+        }
     }
 
     &__message {
         @include section-subtitle-styles();
-        margin: em(10px) 0 0 0;
+        margin: em(10px) 0 em(15px) 0;
+        padding: em(6.5px);
         width: 100%;
         border: 3px solid transparent;
+
+        @include media-query (medium) {
+            margin-bottom: 0;
+        }
     }
 
     &__error {

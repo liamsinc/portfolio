@@ -1,0 +1,23 @@
+// Handles styling for the scroll to top button at the bottom of each page in mobile view.
+// Hidden on larger screens where the vertical header is visible.
+
+.mobile__scroll {
+    width: 100%;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    border: 3px solid $aqua;
+    border-radius: em(5px);
+    color: $white;
+    padding: em(10px);
+    cursor: pointer;
+
+    &:hover {
+        background-color: $aqua;
+        color: $black;
+        font-weight: $font-weight--bold;
+        box-shadow: 0 0 15px $aqua;
+    }
+
+    @include media-query (medium) {
+        display: none;
+    }
+}
