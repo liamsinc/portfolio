@@ -91,14 +91,14 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                                 <p> 
                                     I'm using jQuery to select the document and attaching an anonymous arrow function to the ready event.
                                     First, I grab the URL of the current page and store it in the constant currentURL. I then 
-                                    run the constant through a conditional. The first conditonal checks to see if URL ends 
+                                    run the constant through a conditional. The first conditional checks to see if URL ends 
                                     with anything which indicates index.html is the page currently being used. This is followed by 
-                                    further conditionals (assuming the first conditonal evaluates to false) which check for URLs ending 
+                                    further conditionals (assuming the first conditional evaluates to false) which check for URLs ending 
                                     with about.html, examples.html or scs.html.
                                 </p>
                                 <p>
-                                    The reason why I have 6 statements in the first conditional is to account for a number of issues that 
-                                    arise when the page loads from differnt sources (local server, github pages, cPanel domain). It also 
+                                    I have 6 statements in the first conditional to account for some issues that 
+                                    arise when the page loads from different sources (local server, GitHub pages, cPanel domain). It also 
                                     addresses the issue of the "My Portfolio" and "Contact Me" navigation links being page-local hyperlinks. 
                                     In this case, the main logo would be the active link as the portfolio section and contact form reside on 
                                     the homepage (index.html).
@@ -106,7 +106,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                                 <p>
                                     If for some reason none of the conditions are met, the function will log a message to the JS console. I used a string 
                                     literal to print out the value stored in currentURL. While I was building and testing this function, it allowed me to quickly 
-                                    identify additional strings I needed add to my first if statement. Due to the iterative building process, the function now 
+                                    identify additional strings I needed to add to my first if statement. Due to the iterative building process, the function now 
                                     works whether I launch the site via VSC's live server extension, through GitHub Pages or my cPanel domain provided by Netmatters.
                                 </p>
                             </div>
@@ -133,7 +133,7 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                                     To fix this issue, I wrote this function. The function is invoked when the browser window is resized. First, it 
                                     checks if the window width is greater than or equal to 768px. If this is true, it unchecks the checkbox attached 
                                     to the side menu button and shows the vertical header. If it is false, it then checks if the window width is less than 
-                                    768px and if the checkbox (menu button) is not checked. If this statment returns true, it hides the header.
+                                    768px and if the checkbox (menu button) is not checked. If this statement returns true, it hides the header.
                                 </p>
                             </div>
                         </div>
