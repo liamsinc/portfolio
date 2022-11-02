@@ -301,6 +301,7 @@ scroll button should be visible:
 */
 $(document).ready(() => {
     const currentURL = window.location.href;
+
     if (currentURL.endsWith('index.html') || currentURL.endsWith('#portfolio') ||
         currentURL.endsWith('#form-anchor') || currentURL.endsWith('portfolio/') || 
         currentURL.endsWith('scs.co.uk/') || currentURL.endsWith(':5500/')) { 
@@ -314,8 +315,10 @@ $(document).ready(() => {
     } else {
         console.log(`Error: Cannot determine active link for ${currentURL}`);
     }
+
     $('#check').prop('checked', false);
     $('.contact__input').val('');
+
     checkHeaderScroll();
 });
 
@@ -350,6 +353,7 @@ $(window).on('resize', () => {
     } else if (window.innerWidth < 768 && $('#check').prop('checked') === false) {
         $('.header').hide();
     }
+    
     checkHeaderScroll();
 });
 

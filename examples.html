@@ -83,11 +83,13 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             <img class="coding__snippet snip-1" src="img/code-snippet-1.png" alt="code snippet 1">
                             <div class="coding__text">
                                 <p>
-                                    This function is called whenever the page loads. It's used to apply styles to the navigation links.
-                                    It determines the current page based on a URL ending with a specific string.
+                                    This function is called whenever the page loads. It's used to apply styles to the navigation links, 
+                                    uncheck the side menu button checkbox, clear form input fields and runs a function which determines if 
+                                    the header scroll button should be visible. It determines the current page based on a URL ending with a 
+                                    specific string.
                                 </p>
                                 <p> 
-                                    I'm using jQuery to select the document and attaching an anonymous arrow function to the ready() event.
+                                    I'm using jQuery to select the document and attaching an anonymous arrow function to the ready event.
                                     First, I grab the URL of the current page and store it in the constant currentURL. I then 
                                     run the constant through a conditional. The first conditonal checks to see if URL ends 
                                     with anything which indicates index.html is the page currently being used. This is followed by 
@@ -95,11 +97,11 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                                     with about.html, examples.html or scs.html.
                                 </p>
                                 <p>
-                                    The reason why I have 6 statements in the first conditional is to account for a number of issues that arise 
-                                    when the page loads from differnt sources (local server, github pages, cPanel domain). It also addresses the 
-                                    issue of the "My Portfolio" and "Contact Me" navigation links being page-local hyperlinks. This means, when clicked, 
-                                    the browser will show the linked element. In this case, the main logo would be the active link as the portfolio section 
-                                    and contact form reside on the homepage (index.html).
+                                    The reason why I have 6 statements in the first conditional is to account for a number of issues that 
+                                    arise when the page loads from differnt sources (local server, github pages, cPanel domain). It also 
+                                    addresses the issue of the "My Portfolio" and "Contact Me" navigation links being page-local hyperlinks. 
+                                    In this case, the main logo would be the active link as the portfolio section and contact form reside on 
+                                    the homepage (index.html).
                                 </p>
                                 <p>
                                     If for some reason none of the conditions are met, the function will log a message to the JS console. I used a string 
@@ -117,7 +119,8 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             <div class="coding__text">
                                 <p>
                                     This function is called whenever the browser window is resized. It's used to fix site-breaking 
-                                    behaviour and manipulates the side menu button and the vertical header.  
+                                    behaviour and manipulates the side menu button and the vertical header. It then runs a function 
+                                    which determines if the header scroll button should be visible.
                                 </p>
                                 <p>
                                     While building my website in responsive mode using my browser's developer tools, I noticed after I implemented 
