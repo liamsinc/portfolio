@@ -74,7 +74,7 @@
 .snip-1 {
     width: 100%;
     @include media-query (x-large) {
-        width: em(550px);
+        width: em(525px);
     }
     
 }
@@ -82,7 +82,7 @@
 .snip-2 {
     width: 100%;
     @include media-query (x-large) {
-        width: em(550px);
-        height: em(150px);
+        width: em(525px);
+        // height: em(150px);
     }
 }

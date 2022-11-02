@@ -653,7 +653,7 @@ a {
   display: flex;
   justify-content: right;
   align-items: center;
-  padding-right: 1.875em;
+  padding-right: 1em;
   background-image: url(../img/earth.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -777,7 +777,7 @@ a {
   display: flex;
   justify-content: right;
   align-items: center;
-  padding-right: 1.875em;
+  padding-right: 1em;
   background-image: url(../img/helix.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -903,7 +903,7 @@ a {
   @media (min-width: 1200px) {
     /* line 74, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
     .snip-1 {
-      width: 34.375em; } }
+      width: 32.8125em; } }
 
 /* line 82, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
 .snip-2 {
@@ -911,8 +911,7 @@ a {
   @media (min-width: 1200px) {
     /* line 82, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
     .snip-2 {
-      width: 34.375em;
-      height: 9.375em; } }
+      width: 32.8125em; } }
 
 /* line 7, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */
 .scs__section {
@@ -931,7 +930,7 @@ a {
   display: flex;
   justify-content: right;
   align-items: center;
-  padding-right: 1.875em;
+  padding-right: 1em;
   background-image: url(../img/supernova.jpg);
   background-position: center;
   background-repeat: no-repeat;
