@@ -897,20 +897,12 @@ a {
     .coding__snippet {
       margin-right: 1.875em; } }
 
-/* line 74, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
-.snip-1 {
+/* line 75, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+.snip-1, .snip-2, .snip-3, .snip-4, .snip-5 {
   width: 100%; }
   @media (min-width: 1200px) {
-    /* line 74, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
-    .snip-1 {
-      width: 32.8125em; } }
-
-/* line 82, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
-.snip-2 {
-  width: 100%; }
-  @media (min-width: 1200px) {
-    /* line 82, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
-    .snip-2 {
+    /* line 75, ../../../Documents/Netmatters/Portfolio/scss/sections/_examples.scss */
+    .snip-1, .snip-2, .snip-3, .snip-4, .snip-5 {
       width: 32.8125em; } }
 
 /* line 7, ../../../Documents/Netmatters/Portfolio/scss/sections/_scs.scss */

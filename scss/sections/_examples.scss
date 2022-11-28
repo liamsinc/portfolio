@@ -71,18 +71,11 @@
     }
 }
 
-.snip-1 {
-    width: 100%;
-    @include media-query (x-large) {
-        width: em(525px);
-    }
-    
-}
-
-.snip-2 {
-    width: 100%;
-    @include media-query (x-large) {
-        width: em(525px);
-        // height: em(150px);
-    }
+.snip {
+    &-1, &-2, &-3, &-4, &-5 {
+        width: 100%;
+        @include media-query (x-large) {
+            width: em(525px);
+        }
+    } 
 }

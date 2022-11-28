@@ -138,6 +138,49 @@ Please see _mixins.scss for mixins and _functions.scss for functions.
                             </div>
                         </div>
                     </div>
+                    <div class="coding__item">
+                        <h2 class="coding__item-title">SQL Statement - Database Challenge</h2>
+                        <div class="coding__wrapper">
+                            <div class="coding_img_wrapper">
+                                <img class="coding__snippet snip-3" src="img/movie-database.png" alt="code snippet 3">
+                                <img class="coding__snippet snip-4" src="img/sql-statement.png" alt="code snippet 4">
+                                <img class="coding__snippet snip-5" src="img/sql-output.png" alt="code snippet 5">
+                            </div>
+                            <div class="coding__text">
+                                <p>
+                                    This is an example of an SQL statement. It uses table joining, value concatenation, aliasing and subqueries 
+                                    to return the director, movie name, release year, number of ratings and rating (stars) for a 
+                                    given movie. In this example, I used the movie 'Aliens' to test my query. The first image is the database 
+                                    model I am using, showing the column names of each table and the relationships between tables. The second 
+                                    image shows my SQL query. The third image shows the output when my query is run.
+                                </p>
+                                <p> 
+                                    Firstly, I select the director's first and last name, concatenate them and alias the combined value as 
+                                    'Director'. I then select the movie title, year of release, number of ratings and overall rating, giving them
+                                    aliases of 'Movie', 'Year Released', 'Total Ratings' and 'Stars' respectively. I know the director's first
+                                    and last name resides in the director table, so I select from the director table, giving the table the alias of 'd'.
+                                </p>
+                                <p>
+                                    In order to return the other data, I need access to two other tables - the movie table (movie title, release year) 
+                                    and the ratings table (number of ratings, stars). I need to access the movie table first, so I perform an inner join
+                                    on the movie_direction table, setting the 'd.dir_id' primary key to link to the 'md.dir_id' foreign key in movie_direction.
+                                    I then do the same on the movie table, joining from the movie_direction table. Now I have access to the movie table, I now
+                                    need to access the ratings table. I perform another inner join from the movie table to the ratings table to achieve this.
+
+                                </p>
+                                <p>
+                                    Now I have access to all the data I need, I want to filter the results by passing in a movie name. The results will display
+                                    the selected information where the movie title is equal to a user-specified value, 'Aliens' in this case. I use a subjquery
+                                    to achieve this. My subquery simply returns the movie ID from the movie table where the movie title is equal to 'Aliens'.
+                                    This subquery on its own simply returns the movie ID of the specificed movie.
+                                </p>
+                                <p>
+                                    Finally, underneath my last table join, I add the conditional by using 'WHERE m.mov_id IN (subquery)'. This filters the
+                                    returned results to only display the selected information relating to the chosen movie in the subquery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <button class="mobile__scroll" type="button">Scroll Up</button>
                 </div>
             </section>
