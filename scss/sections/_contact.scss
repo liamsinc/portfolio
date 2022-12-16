@@ -22,6 +22,8 @@
 
     &__subtitle {
         @include section-subtitle-styles();
+        background-color: $black;
+        margin-bottom: em(20px);
         color: $white;
         text-shadow: 0 0 10px $aqua;
         font-weight: $font-weight--bold;
@@ -35,6 +37,9 @@
         justify-content: center;
         align-items: center;
         row-gap: em(10px);
+        border-radius: em(5px);
+        background-color: $black;
+        padding: em(10px);
     }
 
     // Form inputs
@@ -50,8 +55,9 @@
         
         &:focus {
             outline: none;
+            color: $black;
             box-shadow: 0 0 10px $aqua;
-            background-color: $black;
+            background-color: rgba($color: $aqua, $alpha: 0.5)
         }
     }
 
