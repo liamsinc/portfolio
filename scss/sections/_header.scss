@@ -4,7 +4,7 @@
     // Don't display the vertical header on mobile devices
     display: none;
 
-    background-image: url(../img/header-star.jpg);
+    background-image: url(../img/header-star-min.jpg);
     @include background-image-styles();
 
     // Display the vertical header when small breakpoint reached
