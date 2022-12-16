@@ -26,6 +26,7 @@
         margin-bottom: em(20px);
         color: $white;
         text-shadow: 0 0 10px $aqua;
+        border: 3px solid $aqua;
         font-weight: $font-weight--bold;
     }
 
@@ -39,7 +40,9 @@
         row-gap: em(10px);
         border-radius: em(5px);
         background-color: $black;
-        padding: em(10px);
+        padding: em(15px);
+        border: 3px solid $aqua;
+        
     }
 
     // Form inputs
